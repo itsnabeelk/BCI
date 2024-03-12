@@ -174,3 +174,30 @@ $(document).ready(function() {
   });
 
 //close
+$(window).on('hashchange', function() {
+    if (window.location.hash !== '#details') {
+      $('.details').removeClass('show');
+      $('.btn-down').removeClass('rotate');
+      $('.icon-active').hide();
+      $('.icon-none').show();
+      $('.icon-sr').removeClass('show-details');
+    }
+  });
+  
+  $('.btn-down').click(function(e) {
+    e.preventDefault();
+    var parent = $(this).closest('.icon-sr');
+    var details = parent.find('.details');
+    
+    details.toggleClass('show');
+    parent.find('.btn-down').toggleClass('rotate');
+    parent.toggleClass('show-details');
+    
+    if (details.hasClass('show')) {
+      parent.find('.icon-active').show();
+      parent.find('.icon-none').hide();
+    } else {
+      parent.find('.icon-active').hide();
+      parent.find('.icon-none').show();
+    }
+  });
