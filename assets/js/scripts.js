@@ -142,7 +142,7 @@ $(document).ready(function () {
 
 
 // slider
-$(document).ready(function() {
+$(window).on('load', function() {
     var bannerSlider = $('.banner-container');
   
     bannerSlider.slick({
@@ -172,7 +172,6 @@ $(document).ready(function() {
       $('.banner-text').eq(currentSlide).addClass('animate');
     });
   });
-
 //close
 $(window).on('hashchange', function() {
     if (window.location.hash !== '#details') {
