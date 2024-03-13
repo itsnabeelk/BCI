@@ -1133,3 +1133,130 @@ position: relative;
   color: #6ac04a;
 }
 /* close */
+
+/* footer-start */
+.footer-sec{
+  position: relative;
+  background: #323232;
+  width:100%;
+  padding-top: 100px;
+}
+.footer-bottom{
+  border-top: 1px solid #141414;
+  background: #323232;
+  padding: 10px 0;
+}
+.footer-bottom ul{
+  position: relative;
+}
+.footer-bottom ul li {
+  float: left;
+  padding: 0 30px;
+}
+.footer-bottom ul li a{
+  position: relative;
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: 0.5s ease-in-out;
+}
+.footer-bottom ul li a:hover{
+  opacity: 0.7;
+  transition: 0.5s ease-in;
+}
+.footer-bottom ul li a::before {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 2px;
+  background-color: #dcdcdc;
+  left: -28px;
+  top: 10px;
+}
+.footer-bottom .copyright{
+  color: #dcdcdc;
+  transition: 0.5s ease-in-out;
+}
+.footer-bottom .copyright:hover{
+  color: #dcdcdc;
+  transition: 0.5s ease-in;
+  opacity: 0.7;
+}
+.ft-row-flex {
+  display: flex;
+  position: relative;
+  padding-bottom: 50px;
+  justify-content: space-between;
+  width: 70%;
+}
+.ft-row-flex ul {
+  position: relative;
+}
+.ft-row-flex ul label {
+  color: #dcdcdc;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+.ft-row-flex ul li {
+  padding: 5px 0;
+}
+.ft-row-flex ul li a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.5s ease-in;
+  font-weight: 300;
+  font-size: 15px;
+}
+.ft-row-flex ul li a:hover{
+  transition: 0.5s ease-in-out;
+  opacity: 0.7;
+}
+.ft-middle {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.ft-links1 .btn-main-blue {
+  font-weight: 600;
+  position: relative;
+  top: 10px;
+}
+.ft-links1 .social-icon {
+  margin-top: 45px;
+}
+.ft-links1 .social-icon a img {
+  margin-left: 10px;
+}
+
+@media (max-width:994px) {
+  .ft-row-flex {
+    display: flex;
+    position: relative;
+    padding-bottom: 50px;
+    justify-content: space-between;
+    width: 70%;
+    flex-direction: column;
+    gap: 40px;
+}
+.footer-bottom ul {
+  position: relative;
+  display: grid;
+  gap: 20px;
+}
+.footer-bottom .copyright {
+  color: #dcdcdc;
+  transition: 0.5s ease-in-out;
+  text-align: center;
+  width: 100%;
+  position: relative;
+  display: block;
+  background: #252525;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+.ft-logo {
+  margin-right: 25px;
+}
+}
+
+/* footer-close */
