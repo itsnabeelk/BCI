@@ -1135,11 +1135,12 @@ position: relative;
 /* close */
 
 /* footer-start */
-.footer-sec{
+.footer-sec {
   position: relative;
   background: #323232;
-  width:100%;
+  width: 100%;
   padding-top: 100px;
+  margin-top: 100px;
 }
 .footer-bottom{
   border-top: 1px solid #141414;
