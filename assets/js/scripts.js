@@ -173,6 +173,7 @@ $(window).on('load', function() {
     });
   });
 //close
+
 $(window).on('hashchange', function() {
     if (window.location.hash !== '#details') {
       $('.details').removeClass('show');
@@ -200,3 +201,34 @@ $(window).on('hashchange', function() {
       parent.find('.icon-none').show();
     }
   });
+
+// fade-up  
+const fadeUpElements = document.querySelectorAll('.fade-up');
+const fadeDownElements = document.querySelectorAll('.fade-down');
+const fadeLeftElements = document.querySelectorAll('.fade-left');
+const fadeRightElements = document.querySelectorAll('.fade-right');
+
+const fadeUpObserver = createIntersectionObserver(fadeUpElements, 'fade-up-show', 'fadeUpAnimation');
+const fadeDownObserver = createIntersectionObserver(fadeDownElements, 'fade-down-show', 'fadeDownAnimation');
+const fadeLeftObserver = createIntersectionObserver(fadeLeftElements, 'fade-left-show', 'fadeLeftAnimation');
+const fadeRightObserver = createIntersectionObserver(fadeRightElements, 'fade-right-show', 'fadeRightAnimation');
+
+function createIntersectionObserver(elements, showClass, animationName) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(showClass);
+      } else {
+        entry.target.classList.remove(showClass);
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+
+  return observer;
+}
+
+// fade-up-close

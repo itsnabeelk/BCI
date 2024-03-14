@@ -1259,5 +1259,229 @@ position: relative;
   margin-right: 25px;
 }
 }
-
 /* footer-close */
+
+/* tagline-start */
+.breadcrumb-item {
+  display: inline-block;
+  padding-right: 0.5rem;
+  color: #6c757d;
+}
+
+.breadcrumb-item img {
+  vertical-align: middle;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+  float: left;
+  padding-right: .5rem;
+  color: #6c757d;
+  content: "";
+}
+.breadcrumb-item a {
+  color: #969696;
+  text-decoration: none;
+}
+.breadcrumb-item+.breadcrumb-item {
+  padding-left: 0;
+  padding-right: 0;
+}
+.breadcrumb-item label {
+  font-weight: 500;
+}
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0;
+  margin-bottom: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+.headings h2 {
+  font-size: 2vw;
+  color: #646464;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+.headings h1 {
+  font-size: 3vw;
+  color: #969696;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.headings p {
+  color: #323232;
+  font-size: 1vw;
+}
+
+.sc-one .fade-up,
+.sc-one .fade-down,
+.sc-one .fade-left,
+.sc-one .fade-right {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fade-up-show {
+  animation: fadeUpAnimation 1s ease forwards;
+}
+
+.fade-down-show {
+  animation: fadeDownAnimation 1s ease forwards;
+}
+
+.fade-left-show {
+  animation: fadeLeftAnimation 1s ease forwards;
+}
+
+.fade-right-show {
+  animation: fadeRightAnimation 1s ease forwards;
+}
+
+@keyframes fadeUpAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDownAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeftAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRightAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.grid-container .col {
+  flex-basis: 48%;
+}
+.grid-container .col h4 {
+  color: #00c1de;
+  margin-bottom: 25px;
+}
+.grid-container .col p {
+  max-width: 80%;
+  color: #323232;
+}
+@media (max-width: 768px) {
+  .grid-container .col {
+    flex-basis: 100%;
+  }
+  .grid-container .col p {
+    max-width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .headings h2 {
+    font-size: 35px;
+}
+.headings h1 {
+  font-size: 45px;
+}
+.headings p {
+  font-size: 25px;
+}
+p {
+  font-size: 18px;
+}
+.p-100 {
+  padding: 100px 15px;
+}
+}
+/* tagline-close */
+
+/* vision-start */
+.vision-main{
+  padding: 0 !important
+}
+.vision-main .accordion-button {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #646464 !important;
+  background-color: #f8f8f8 !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+.vision-main .accordion-button::after {
+  background-image: url('../images/icons/down-blue.png') !important;
+  transform: rotate(-180deg);
+  background-size: 35px 15px;
+  width: 35px;
+  height: 15px;
+}
+.vision-main .accordion-button:not(.collapsed)::after {
+  transform: rotate(0);
+}
+.vision-main .accordion-button:not(.collapsed)::before {
+  width: 15px;
+  position: relative;
+  content: "";
+  height: 3px;
+  background-color: #00c1de;
+  margin-right: 10px;
+}
+.vision-main .accordion-button:not(.collapsed) {
+  color: #0a58ca;
+}
+
+.vision-main .accordion-button:focus {
+  z-index: 2;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: none;
+}
+
+.vision-main .accordion-body {
+  font-size: 1rem;
+  background: #f8f8f8;
+  padding: 20px 20px;
+}
+.vision-main .accordion-body span {
+  padding: 15px 25px;
+  background: #fff;
+  width: 100%;
+  color: #323232 !important;
+  display: block;
+}
+
+.vision-main .accordion-item {
+  border: none;
+  background-color: #fff !important;
+}
+/* vison-close */
