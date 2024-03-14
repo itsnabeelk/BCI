@@ -1398,11 +1398,42 @@ position: relative;
   max-width: 80%;
   color: #323232;
 }
+.grid-container .col label {
+  max-width: 80%;
+  color: #323232;
+  font-size: 14px;
+  font-weight: 300;
+}
+.grid-container ul {
+  margin: 15px 0;
+  list-style-type: none;
+  padding: 0;
+}
+.grid-container ul li {
+  margin: 15px 0;
+  font-weight: 500;
+  margin-left: 15px;
+}
+.grid-container ul li:before {
+  content: "-";
+  color: #17c7e1;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+.grid-container img {
+  width: 250px;
+  max-width: 300px;
+  height: 250px;
+}
 @media (max-width: 768px) {
   .grid-container .col {
     flex-basis: 100%;
   }
   .grid-container .col p {
+    max-width: 100%;
+  }
+  .grid-container .col label {
     max-width: 100%;
   }
 }
@@ -1448,7 +1479,7 @@ p {
 .vision-main .accordion-button:not(.collapsed)::after {
   transform: rotate(0);
 }
-.vision-main .accordion-button:not(.collapsed)::before {
+.vision-main .accordion-button::before {
   width: 15px;
   position: relative;
   content: "";
