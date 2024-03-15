@@ -16,6 +16,10 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden !important;
 }
+p{
+  color: #323232 !important;
+}
+
 
 
 /* Cursor
@@ -1267,7 +1271,15 @@ position: relative;
   padding-right: 0.5rem;
   color: #6c757d;
 }
-
+@media (max-width:680px) {
+  .breadcrumb-item {
+    font-size: 12px;
+}
+.breadcrumb-item img {
+  vertical-align: middle;
+  width: 5px;
+}
+}
 .breadcrumb-item img {
   vertical-align: middle;
 }
@@ -1516,3 +1528,144 @@ p {
   background-color: #fff !important;
 }
 /* vison-close */
+
+/* basic chemicals-start */
+.basic-chemicals-section {
+  position: relative;
+  margin-bottom: 150px;
+}
+.basic-chemicals-section  .row-controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.basic-chemicals-section .text-container h1{
+  font-weight: 700;
+  font-size: 3vw;
+  margin-bottom: 25px;
+  color: #ffb71b;
+}
+.basic-chemicals-section .text-container p{
+  font-size: 18px;
+}
+.basic-chemicals-section .image-container img{
+   width: 100%;
+}
+.basic-chemicals-section .text-container {
+ width: 50%;
+}
+.basic-chemicals-section .image-container {
+   width:50%;
+}
+@media (max-width:1200px) {
+  .basic-chemicals-section .text-container h1 {
+    font-size: 45px;
+}
+}
+@media (max-width:987px) {
+  .basic-chemicals-section .text-container h1 {
+    font-size: 25px;
+}
+.basic-chemicals-section .text-container p {
+  font-size: 14px;
+}
+}
+@media (max-width:780px) {
+  .row-controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-direction: column-reverse;
+}
+.basic-chemicals-section .text-container {
+  width: 100%;
+}
+.basic-chemicals-section .image-container {
+  width: 100%;
+}
+.basic-chemicals-section .text-container h1 {
+  font-size: 45px;
+}
+.basic-chemicals-section .text-container p {
+  font-size: 18px;
+}
+}
+.basic-chemical-icon {
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.basic-chemical-icon img {
+  transition: transform 0.3s ease;
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.basic-chemical-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.basic-chemical-icon:hover::before {
+  opacity: 1;
+}
+.basic-chemicals-section .sub-container {
+  margin-top: 80px;
+  padding: 50px;
+  background: #f8f8f8;
+}
+.basic-chemicals-section .sub-container p {
+  margin-bottom: 35px;
+}
+.basic-chemicals-section .card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.basic-chemicals-section .card:hover {
+  transform: scale(1.05);
+}
+.basic-chemicals-section .card-body {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  height: 80px;
+  text-decoration: none;
+}
+.basic-chemicals-section .card-body::before {
+  content: "";
+  position: relative;
+  width: 15px;
+  height: 2px;
+  background-color: #ffb71b;
+  margin-right: 10px;
+}
+.basic-chemicals-section .button-container a{
+  display: flex;
+  justify-content: start;
+  text-decoration: none;
+  align-items: center;
+  color: #ffb71b;
+  font-weight: 700;
+  gap: 15px;
+}
+/* end */
