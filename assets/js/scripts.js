@@ -232,3 +232,19 @@ function createIntersectionObserver(elements, showClass, animationName) {
 }
 
 // fade-up-close
+
+
+// fav-dark and light
+  function setFavicon() {
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const favicon = document.querySelector('link[rel="shortcut icon"]');
+    
+    if (isDarkMode) {
+      favicon.href = 'assets/images/fav-dark.png';
+    } else {
+      favicon.href = 'assets/images/fav-light.png';
+    }
+  }
+  setFavicon();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+// close

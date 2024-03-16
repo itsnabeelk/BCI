@@ -1529,45 +1529,45 @@ p {
 }
 /* vison-close */
 
-/* basic chemicals-start */
-.basic-chemicals-section {
+/*business-unit-section-start */
+.business-unit-section {
   position: relative;
   margin-bottom: 150px;
 }
-.basic-chemicals-section  .row-controller {
+.business-unit-section .row-controller {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
 }
-.basic-chemicals-section .text-container h1{
+.business-unit-section .text-container h1{
   font-weight: 700;
   font-size: 3vw;
   margin-bottom: 25px;
   color: #ffb71b;
 }
-.basic-chemicals-section .text-container p{
+.business-unit-section .text-container p{
   font-size: 18px;
 }
-.basic-chemicals-section .image-container img{
+.business-unit-section .image-container img{
    width: 100%;
 }
-.basic-chemicals-section .text-container {
+.business-unit-section .text-container {
  width: 50%;
 }
-.basic-chemicals-section .image-container {
+.business-unit-section .image-container {
    width:50%;
 }
 @media (max-width:1200px) {
-  .basic-chemicals-section .text-container h1 {
+  .business-unit-section .text-container h1 {
     font-size: 45px;
 }
 }
 @media (max-width:987px) {
-  .basic-chemicals-section .text-container h1 {
+  .business-unit-section .text-container h1 {
     font-size: 25px;
 }
-.basic-chemicals-section .text-container p {
+.business-unit-section .text-container p {
   font-size: 14px;
 }
 }
@@ -1579,17 +1579,17 @@ p {
     gap: 30px;
     flex-direction: column-reverse;
 }
-.basic-chemicals-section .text-container {
+.business-unit-section .text-container {
   width: 100%;
 }
-.basic-chemicals-section .image-container {
+.business-unit-section .image-container {
   width: 100%;
 }
-.basic-chemicals-section .text-container h1 {
+.business-unit-section .text-container h1 {
   font-size: 45px;
 }
-.basic-chemicals-section .text-container p {
-  font-size: 18px;
+.business-unit-section .text-container p {
+  font-size: 15px;
 }
 }
 .basic-chemical-icon {
@@ -1629,29 +1629,29 @@ p {
 .basic-chemical-icon:hover::before {
   opacity: 1;
 }
-.basic-chemicals-section .sub-container {
+.business-unit-section .sub-container {
   margin-top: 80px;
   padding: 50px;
   background: #f8f8f8;
 }
-.basic-chemicals-section .sub-container p {
+.business-unit-section .sub-container p {
   margin-bottom: 35px;
 }
-.basic-chemicals-section .card {
+.business-unit-section .card {
   cursor: pointer;
   transition: transform 0.2s;
 }
-.basic-chemicals-section .card:hover {
+.business-unit-section .card:hover {
   transform: scale(1.05);
 }
-.basic-chemicals-section .card-body {
+.business-unit-section .card-body {
   display: flex;
   justify-content: left;
   align-items: center;
   height: 80px;
   text-decoration: none;
 }
-.basic-chemicals-section .card-body::before {
+.business-unit-section .card-body::before {
   content: "";
   position: relative;
   width: 15px;
@@ -1659,7 +1659,7 @@ p {
   background-color: #ffb71b;
   margin-right: 10px;
 }
-.basic-chemicals-section .button-container a{
+.business-unit-section .button-container a{
   display: flex;
   justify-content: start;
   text-decoration: none;
@@ -1668,4 +1668,73 @@ p {
   font-weight: 700;
   gap: 15px;
 }
+
+.industrial-unit .text-container h1 {
+  color: #00c1de;
+}
+.industrial-unit .button-container a {
+  color: #0dcaf0;
+}
+.industrial-unit .card-body {
+  color: #0dcaf0 !important;
+  font-weight: 600;
+}
+.industrial-unit .card-body::before {
+  background-color: #0dcaf0;
+}
+.industrial-unit .card p {
+  padding: 0rem 2rem;
+  max-width: 90%;
+}
+.card-body {
+  padding: 1rem 2rem;
+}
+@media (max-width:780px) {
+  .business-unit-section .sub-container {
+    margin-top: 40px;
+    padding: 25px;
+  }
+  .business-unit-section .sub-container p {
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+.industrial-unit .card p {
+  padding: 0rem 1rem;
+  max-width: 100%;
+}
+.card-body {
+  padding: 1rem 1rem;
+}
+.business-unit-section {
+  position: relative;
+  margin-bottom: 0;
+}
+}
+.contract-unit .text-container h1 {
+  color: #6ac04a;
+}
+.contract-unit .button-container a {
+  color: #6ac04a;
+}
+.contract-unit .card-body {
+  color: #646464 !important;
+  font-weight: 600;
+}
+.contract-unit .card-body::before {
+  background-color: #6ac04a;
+}
+.water-treatment .text-container h1 {
+  color: #243588;
+}
+.water-treatment .button-container a {
+  color: #243588;
+}
+.water-treatment .card-body {
+  color: #243588 !important;
+  font-weight: 600;
+}
+.water-treatment .card-body::before {
+  background-color: #243588;
+}
+
 /* end */
