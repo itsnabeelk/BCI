@@ -248,3 +248,27 @@ function createIntersectionObserver(elements, showClass, animationName) {
   setFavicon();
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
 // close
+
+function toggleProduct(event, productId) {
+  event.preventDefault();
+
+  var productItems = document.getElementsByClassName('product-item');
+  var products = document.getElementsByClassName('content-container');
+
+  // Remove the active class from all product items and products
+  for (var i = 0; i < productItems.length; i++) {
+      productItems[i].classList.remove('active');
+  }
+
+  for (var j = 0; j < products.length; j++) {
+      products[j].classList.remove('active');
+      products[j].querySelector('.icon1').style.display = 'block';
+      products[j].querySelector('.icon2').style.display = 'none';
+  }
+
+  // Add the active class to the clicked product item and product
+  document.getElementById(productId).classList.add('active');
+  event.currentTarget.parentElement.classList.add('active');
+  event.currentTarget.querySelector('.icon1').style.display = 'none';
+  event.currentTarget.querySelector('.icon2').style.display = 'block';
+}
