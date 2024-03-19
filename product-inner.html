@@ -213,42 +213,206 @@
         </div>
     </nav>
     <!-- close-header -->
+
+
     <nav>
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><img src="assets/images/icons/right-blue.svg" alt="/" width="10px" /></li>
-                <li class="breadcrumb-item"><a href="">About</a></li>
+                <li class="breadcrumb-item"><a href="products.html">Products</a></li>
                 <li class="breadcrumb-item"><img src="assets/images/icons/right-blue.svg" alt="/" width="10px" /></li>
-                <li class="breadcrumb-item"><label>Tagline</label></li>
+                <li class="breadcrumb-item"><a href="products.html"> Basic Chemistry</a></li>
+                <li class="breadcrumb-item"><img src="assets/images/icons/right-blue.svg" alt="/" width="10px" /></li>
+                <li class="breadcrumb-item"><label>Caustic Soda 32%</label></li> 
               </ol>
         </div>
     </nav>
-    <section class="sc-one p-100">
+
+
+    <section class="all-products-main">
         <div class="container">
-            <div class="headings">
-                <h2 class="fade-up">OUR TAGLINE</h2>
-                <h1 class="fade-left">CHEMISTRY WITH <br>ASSURANCE™</h1>
-                <p class="fade-right">BCI’s tagline highlights with two words what we strive to deliver <br> to our customers every day.</p>
+            <div class="product-container">
+                <div class="content-container">
+                    <a href="#" onclick="toggleProduct(event, 'product-01')" class="product-1 active">
+                        <img class="icon1" src="assets/images/service/icons/icon1.svg" alt="" style="display:none;">
+                        <img class="icon2" src="assets/images/service/icons/icon1-active.svg" alt="" style="display: inline-block;">
+                        <h2>BASIC <br> CHEMICALS</h2>
+                    </a>
+                </div>
+                <!-- 2 -->
+                <div class="content-container">
+                    <a href="#" onclick="toggleProduct(event, 'product-02')" class="product-2">
+                        <img class="icon1" src="assets/images/service/icons/icon2.svg" alt="">
+                        <img class="icon2" src="assets/images/service/icons/icon2-active.svg" alt="">
+                        <h2>BASIC <br> CHEMICALS</h2>
+                    </a>
+                </div>
+                <!-- 3 -->
+                <div class="content-container">
+                    <a href="#" onclick="toggleProduct(event, 'product-03')" class="product-3">
+                        <img class="icon1" src="assets/images/service/icons/icon3.svg" alt="">
+                        <img class="icon2" src="assets/images/service/icons/icon3-active.svg" alt="">
+                        <h2>BASIC <br> CHEMICALS</h2>
+                    </a>
+                </div>
+                <!-- 4 -->
+                <div class="content-container">
+                    <a href="#" onclick="toggleProduct(event, 'product-04')" class="product-4">
+                        <img class="icon1" src="assets/images/service/icons/icon4.svg" alt="">
+                        <img class="icon2" src="assets/images/service/icons/icon4-active.svg" alt="">
+                        <h2>BASIC <br> CHEMICALS</h2>
+                    </a>
+                </div>
             </div>
-            <div class="grid-container">
-                <div class="col fade-down">
-                  <h4>CHEMISTRYt</h4>
-                  <p>
-                    We are diverse, supplying chemistries to virtually every industry, from basic to specialty chemicals. We
-                    understand our customers’ needs and work to deliver total solutions around them.
-                  </p>
+
+            <div id="product-01" class="product-item active">
+                <div class="service-sub">
+                    <div class="product-inner">
+                        <div class="button-container fade-up">
+                            <h1>CAUSTIC SODA 32%</h1>
+                            <a href="#">
+                                <label>DOWNLOAD DOCUMENTS</label>
+                                <img src="assets/images/icons/yellow-pdf.svg" class="d-hide" alt="">
+                                <img src="assets/images/icons/white-pdf.svg" class="d-active" alt="">
+                            </a>
+                        </div>
+                        <div class="content-container2 fade-down">
+                            <h2>PRODUCT DESCRIPTION</h2>
+                            <div class="content">
+                                <p>
+                                    Caustic Soda is a 32% w/w Sodium Hydroxide (NaOH) in solution. It is a corrosive clear water white
+                                    solution,
+                                    a class 8 Dangerous Good. It is used in chemical, mining and mineral processing predominantly for pH
+                                    adjustment and neutralisation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="content-container2 fade-down">
+                            <h2>APPLICATION</h2>
+                            <div class="content">
+                                <p>
+                                    Caustic Soda is a highly versatile chemical. Included among its many applications are the following:
+                                </p>
+                                <ul>
+                                    <li>Acid neutralization, bleaching in papermaking and cotton processing, petroleum refining.</li>
+                                    <li>Manufacturing synthetic fabrics such as rayon.</li>
+                                    <li>Production of alumina from bauxite.</li>
+                                    <li>Production of soaps, detergents, and manufacturing food products</li>
+                                </ul>
+                            </div>
+                        </div>
+                
+                        <div class="content-dropdown">
+                            <div class="dropdown-btn">
+                                <div class="btn-controller">
+                                    <a href="#" onclick="toggleDropdown(event)">
+                                        <label>TECHNICAL DATA</label>
+                                        <img src="assets/images/icons/down-yellow.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="dropdown-table">
+                                <div class="breadcrumb-table">
+                                    <div class="name">
+                                        <span>CHEMICAL NAME:</span>
+                                        <label>CAUSTIC SODA (LIQUID 32%)</label>
+                                    </div>
+                                    <div class="date">
+                                        <span>REVISION DATE:</span>
+                                        <label>27-09-2022</label>
+                                    </div>
+                                    <div class="version">
+                                        <span>VERSION:</span>
+                                        <label>01</label>
+                                    </div>
+                                </div>
+                                <!-- table1-start -->
+                                <table class="table">
+                                    <h4>PHYSICAL PROPERTIES</h4>
+                                    <thead>
+                                        <tr>
+                                            <th>Properties</th>
+                                            <th class="text-center">BCI Specifications</th>
+                                            <th class="text-center">Units</th>
+                                            <th class="text-center">Test Methods</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Properties">Molecular Weight</td>
+                                            <td data-label="BCI Specifications" class="text-center">40</td>
+                                            <td data-label="Units" class="text-center">g/mo</td>
+                                            <td data-label="Test Methods" class="text-center">-</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Properties">Specific Gravity 20/20 °C</td>
+                                            <td data-label="BCI Specifications" class="text-center">1.53</td>
+                                            <td data-label="Units" class="text-center">-</td>
+                                            <td data-label="Test Methods" class="text-center">-</td>
+                                        </tr>
+                                        <!-- Add more table rows as needed -->
+                                    </tbody>
+                                </table>
+                                <!-- table1-close -->
+                                <!-- table2-start -->
+                                <table class="table">
+                                    <h4>SPECIFICATIONS</h4>
+                                    <thead>
+                                        <tr>
+                                            <th>Properties</th>
+                                            <th class="text-center">BCI Specifications</th>
+                                            <th class="text-center">Units</th>
+                                            <th class="text-center">Test Methods</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td data-label="Properties">Appearance</td>
+                                            <td data-label="BCI Specifications" class="text-center">Clear / Transparent</td>
+                                            <td data-label="Units" class="text-center">-</td>
+                                            <td data-label="Test Methods" class="text-center">Visual</td>
+                                        </tr>
+                                        <tr>
+                                            <td data-label="Properties">Purity</td>
+                                            <td data-label="BCI Specifications" class="text-center">30.0 - 32.5</td>
+                                            <td data-label="Units" class="text-center">%</td>
+                                            <td data-label="Test Methods" class="text-center">ASTM E291</td>
+                                        </tr>
+                                        <!-- Add more table rows as needed -->
+                                    </tbody>
+                                </table>
+                                <!-- table2-close -->
+                            </div>
+                        </div>
+                
+                    </div>
                 </div>
-                <div class="col fade-up">
-                  <h4>CHEMISTRYt</h4>
-                  <p>
-                    We are diverse, supplying chemistries to virtually every industry, from basic to specialty chemicals. We
-                    understand our customers’ needs and work to deliver total solutions around them.
-                  </p>
+            </div>
+
+            <div id="product-02" class="product-item">
+                <div class="service-sub">
+
                 </div>
-              </div>
+            </div>
+            <div id="product-03" class="product-item">
+                <div class="service-sub">
+                    
+                </div>
+            </div>
+            <div id="product-04" class="product-item">
+                <div class="service-sub">
+                    
+                </div>
+            </div>
+
         </div>
     </section>
+
+
+
+
+
 
 <!-- footer-start -->
 <section class="footer-sec">

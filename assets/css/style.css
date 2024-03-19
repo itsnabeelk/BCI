@@ -1810,7 +1810,12 @@ p {
 .service-sub .link-container {
   background-color: #f2f2f2;
   padding: 15px;
+  cursor: pointer;
 }
+.service-sub .link-container label {
+  cursor: pointer;
+}
+
 
 @media screen and (max-width: 767px) {
   .service-sub .link-bx1 {
@@ -1856,8 +1861,8 @@ p {
 }
 @media (max-width: 530px) {
   .product-container .content-container a img {
-    width: 25px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
 }
 .product-container .content-container a h2 {
   font-size: 10px;
@@ -1868,6 +1873,313 @@ p {
 .product-container .content-container a {
   gap: 0;
 }
+.all-products-main {
+  position: relative;
+  padding: 40px 0;
+}
 }
 
+.product-item .product-inner{
+   position: relative;
+   width:100%;
+}
+.product-item .product-inner .button-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #b2b2b2;
+  padding-bottom: 50px;
+  align-items: center;
+}
+.product-item .product-inner .button-container h1 {
+  font-weight: 700;
+  color: #ffb71b;
+}
+.product-item .product-inner .button-container a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ffb71b;
+  text-decoration: none;
+  color: #ffb71b;
+  font-weight: 700;
+  transition: 0.5s ease-out;
+}
+.product-item .product-inner .button-container a label{
+  cursor: pointer;
+  transition: 0.5s ease-out;
+}
+.product-item .product-inner .button-container a img{
+  transition: 0.5s ease-out;
+  width: 40px;
+  height: 40px;
+}
+.d-active{
+  display: none;
+}
+.d-hide{
+  display: block;
+}
+.product-item .product-inner .button-container a:hover{
+  color: #fff;
+  transition: 0.5s ease;
+  background-color: #ffb71b;
+}
+.product-item .product-inner .button-container a:hover label{
+  color: #fff;
+  transition: 0.5s ease;
+}
+.product-item .product-inner .button-container a:hover .d-active{
+ display: block;
+ transition: 0.5s ease;
+}
+.product-item .product-inner .button-container a:hover .d-hide{
+  display: none;
+  transition: 0.5s ease;
+}
+.product-inner .content-container2 {
+  position: relative;
+  border-bottom: 1px solid #b2b2b2;
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+}
+.product-inner .content-container2 h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffb71b;
+  width: 50%;
+}
+.product-inner .content-container2 .content {
+  width: 100%;
+}
+.product-inner .content-container2 .content ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  line-height: normal;
+  padding-left: 18px;
+  padding-top: 20px;
+}
+.product-inner .content-container2 .content ul li {
+  list-style: disc;
+  max-width: 80%;
+  font-size: 14px;
+}
+@media (max-width: 992px) {
+  .product-inner .content-container2 {
+    position: relative;
+    border-bottom: 1px solid #b2b2b2;
+    padding: 50px 0;
+    display: flex;
+    align-items: normal;
+    flex-direction: column;
+}
+.product-inner .content-container2 .content p{
+  font-size: 14px;
+  padding-top: 30px;
+}
+.product-item .product-inner .button-container {
+  padding-bottom: 35px;
+}
+.product-item .product-inner .button-container {
+  align-items: flex-start;
+  flex-direction: column;
+}
+.product-item .product-inner .button-container h1 {
+  font-weight: 700;
+  color: #ffb71b;
+  margin-bottom: 30px;
+}
+}
+@media (max-width: 780px) {
+  .product-inner .content-container2 .content ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 25px;
+}
+.product-item .product-inner .button-container a label {
+  font-size: 12px;
+}
+.product-item .product-inner .button-container a img {
+  width: 25px;
+  height: 25px;
+}
+.product-item .product-inner .button-container a {
+  padding: 10px;
+}
+}
+.content-dropdown{
+  position: relative;
+}
+.dropdown-btn {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: end;
+  margin-bottom: 50px;
+}
+.content-dropdown .dropdown-btn a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ffb71b;
+  text-decoration: none;
+  color: #ffb71b;
+  font-weight: 700;
+  width: fit-content;
+  float: right;
+  margin-top: 50px;
+}
+.content-dropdown .dropdown-btn a label{
+cursor: pointer;
+}
+.content-dropdown .dropdown-btn a img{
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.dropdown-table {
+  display: none;
+}
+
+.content-dropdown .dropdown-table {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  will-change: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation: dropdownFade 0.8s ease-in-out forwards;
+}
+@keyframes dropdownFade {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.content-dropdown .dropdown-btn.active + .dropdown-table {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.content-dropdown .dropdown-btn .btn-controller {
+  display: flex;
+  justify-content: flex-end;
+}
+.content-dropdown .dropdown-table .breadcrumb-table {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f8f8f8;
+}
+.content-dropdown .dropdown-table .breadcrumb-table .name span,
+.content-dropdown .dropdown-table .breadcrumb-table .date span,
+.content-dropdown .dropdown-table .breadcrumb-table .version span {
+  font-weight: 400;
+  font-size: 15px;
+  color: #b1b1b1;
+}
+
+.content-dropdown .dropdown-table .breadcrumb-table .name label,
+.content-dropdown .dropdown-table .breadcrumb-table .date label,
+.content-dropdown .dropdown-table .breadcrumb-table .version label {
+  font-weight: 600;
+  font-size: 15px;
+  color: #646464;
+}
+
+/* table */
+.content-dropdown .dropdown-table h4 {
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffb71b;
+}
+.content-dropdown .dropdown-table table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  margin-top: 30px;
+}
+.content-dropdown .dropdown-table th {
+  background-color: #969696;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+}
+
+.content-dropdown .dropdown-table td {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px;
+  border-right: 1px solid #dcdcdc;
+  vertical-align: middle;
+}
+
+.content-dropdown .dropdown-table th:first-child,
+.content-dropdown .dropdown-table td:first-child {
+  border-left: 1px solid #dcdcdc;
+}
+
+.content-dropdown .dropdown-table th:last-child,
+.content-dropdown .dropdown-table td:last-child {
+  border-right: none;
+}
+@media (max-width:760px) {
+  .content-dropdown .dropdown-table td {
+    font-size: 10px;
+}
+.content-dropdown .dropdown-table th {
+  font-size: 10px;
+}
+.content-dropdown .dropdown-table h4 {
+  margin-top: 25px;
+  font-size: 14px;
+}
+.content-dropdown .dropdown-table table {
+  margin-top: 15px;
+}
+.content-dropdown .dropdown-table .breadcrumb-table .name span, .content-dropdown .dropdown-table .breadcrumb-table .date span, .content-dropdown .dropdown-table .breadcrumb-table .version span {
+  font-size: 10px;
+}
+.content-dropdown .dropdown-table .breadcrumb-table .name label, .content-dropdown .dropdown-table .breadcrumb-table .date label, .content-dropdown .dropdown-table .breadcrumb-table .version label {
+  font-size: 12px;
+}
+.content-dropdown .dropdown-table .breadcrumb-table {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 15px;
+  background-color: #f8f8f8;
+  flex-direction: column;
+}
+.content-dropdown .dropdown-btn a {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  padding: 8px;
+  border: 1px solid #ffb71b;
+  text-decoration: none;
+  color: #ffb71b;
+  font-weight: 700;
+  width: fit-content;
+  float: right;
+  margin-top: 35px;
+  font-size: 12px;
+}
+.content-dropdown .dropdown-btn a img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+}
 /* product-close */

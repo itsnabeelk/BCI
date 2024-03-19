@@ -249,6 +249,8 @@ function createIntersectionObserver(elements, showClass, animationName) {
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
 // close
 
+
+// products-tab
 function toggleProduct(event, productId) {
   event.preventDefault();
 
@@ -272,3 +274,24 @@ function toggleProduct(event, productId) {
   event.currentTarget.querySelector('.icon1').style.display = 'none';
   event.currentTarget.querySelector('.icon2').style.display = 'block';
 }
+
+// close
+
+function toggleDropdown(event) {
+  event.preventDefault();
+  var dropdownBtn = event.target.closest('.dropdown-btn');
+  var dropdownTable = dropdownBtn.nextElementSibling;
+
+  dropdownBtn.classList.toggle('active');
+  dropdownTable.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+  var dropdownBtn = event.target.closest('.dropdown-btn');
+  var dropdownTable = document.querySelector('.dropdown-table');
+
+  if (dropdownBtn === null && dropdownTable.classList.contains('active')) {
+      dropdownTable.classList.remove('active');
+      document.querySelector('.dropdown-btn.active').classList.remove('active');
+  }
+});

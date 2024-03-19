@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.56 42.3">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #ffb71b;
+      }
+
+      .cls-1, .cls-3 {
+        fill: none;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #ffb71b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-linecap: round;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <line class="cls-3" x1="11.7" y1="24.57" x2="15.38" y2="28.26"/>
+      <g>
+        <g>
+          <polygon class="cls-1" points="1.21 12.38 1.21 41.3 29.56 41.3 29.56 1.21 12.38 1.21 1.21 12.38"/>
+          <polygon class="cls-2" points="12.38 12.38 12.38 1.21 1.21 12.38 12.38 12.38"/>
+          <line class="cls-3" x1="15.38" y1="16.07" x2="15.38" y2="28.16"/>
+        </g>
+        <line class="cls-3" x1="19.07" y1="24.57" x2="15.38" y2="28.26"/>
+      </g>
+    </g>
+  </g>
+</svg>
