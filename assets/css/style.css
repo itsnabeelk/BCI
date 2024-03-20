@@ -2183,3 +2183,109 @@ cursor: pointer;
 }
 }
 /* product-close */
+
+/* news-start */
+.news-section {
+  padding: 100px 15px;
+  position: relative;
+}
+.news-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 60px;
+}
+.right-flip{
+  flex-direction: row-reverse !important;
+}
+.news-container .news-image-container{
+ position: relative;
+ width: 50%;
+ }
+.news-container .news-image-container img{
+ width:100%;
+}
+.news-container  .news-content-container{
+width:50%;
+position: relative;
+}
+.news-container  .news-content-container h2{
+ color: #646464;
+}
+.news-container  .news-content-container p {
+  color: #323232;
+  margin-top: 25px;
+}
+.news-container .news-content-container a {
+  position: relative;
+  top: 25px;
+  color: #00c1de;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.news-container .news-content-container a::after {
+  content: "";
+  position: absolute;
+  width: 125px;
+  height: 2px;
+  background-color: #00c1de;
+  bottom: -15px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.news-container .news-content-container a:hover::after {
+  width: 140px;
+}
+
+@media (max-width:1200px) {
+  .news-container  .news-content-container h2 {
+    font-size: 25px;
+}
+.news-container  .news-content-container p {
+  margin-top: 15px;
+  font-size: 14px;
+}
+.news-container .news-content-container a {
+  top: 10px;
+  font-size: 14px;
+}
+}
+@media (max-width:1080px){
+  .news-container  .news-content-container h2 {
+    font-size: 18px;
+}
+.news-container  .news-content-container p {
+  margin-top: 15px;
+  font-size: 12px;
+}
+.news-container .news-content-container a {
+  top: 0;
+  font-size: 12px;
+}
+}
+@media (max-width:898px) {
+  .news-container {
+    gap: 35px;
+    margin-bottom: 85px;
+    flex-direction: column;
+}
+.news-container .news-image-container {
+  position: relative;
+  width: 100%;
+}
+.news-container  .news-content-container {
+  width: 100%;
+  position: relative;
+}
+.right-flip {
+  flex-direction: column !important;
+}
+.news-section {
+  padding: 50px 15px;
+  position: relative;
+}
+}
+/* news-end */
