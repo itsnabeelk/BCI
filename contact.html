@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +16,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .navbar {
-    position: relative;
-    width: 100%;
-}
+            position: relative;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -62,8 +63,10 @@
                                 <ul class="navbar-nav flex-column custom-mega-drop">
                                     <li class="nav-item"><a class="nav-link-c" href="#">THE HISTORY OF BCI</a></li>
                                     <li class="nav-item"><a class="nav-link-c" href="tagline.html">OUR TAGLINE</a></li>
-                                    <li class="nav-item"><a class="nav-link-c" href="vison.html">VISION & VALUES</a></li>
-                                    <li class="nav-item"><a class="nav-link-c" href="code-conduct.html">CODE OF CONDUCT</a></li>
+                                    <li class="nav-item"><a class="nav-link-c" href="vison.html">VISION & VALUES</a>
+                                    </li>
+                                    <li class="nav-item"><a class="nav-link-c" href="code-conduct.html">CODE OF
+                                            CONDUCT</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -219,7 +222,7 @@
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><img src="assets/images/icons/right-blue.svg" alt="/" width="10px" /></li>
                 <li class="breadcrumb-item"><label>Contact</label></li>
-              </ol>
+            </ol>
         </div>
     </nav>
     <section class="contact-section">
@@ -241,58 +244,203 @@
                         </ul>
                     </div>
                     <div class="enq-btn fade-right">
-                        <a href="">MAKE AN ENQUIRY</a>
+                        <a href="#" onclick="toggleContactForm()">MAKE AN ENQUIRY</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact-form" class="contact-form" style="display: none;">
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="name" placeholder="Name:">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="organisation" placeholder="Organisation:">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email:">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="form-group">
+                                <input type="tel" class="form-control" id="phone" placeholder="Phone No:">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12  mb-4">
+                            <div class="form-group">
+                                <textarea class="form-control" id="message" rows="4" placeholder="Message:"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary">ENQUIRE</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="map-container">
+        <div class="container">
+            <div class="map">
+                <div class="country-container">
+                    <a href="#dubai-address" id="dubai" class="dubai country-link" onclick="highlightAddressContainer('dubai-address')">
+                        <label class="country-name">Dubai</label>
+                        <span class="store1">1 x Warehouse</span>
+                        <span class="store2">1 x Office</span>
+                    </a>
+                    <!-- 2 -->
+                    <a href="#" id="dammam" class="dammam">
+                        <label class="country-name">Dammam</label>
+                        <span class="store1">Head Office</span>
+                        <span class="store2">3 x Warehouse</span>
+                        <span class="store3">2 x Plant</span>
+                        <span class="store4">1 x Salt Mine</span>
+                    </a>
+                    <!-- 3 -->
+                    <a href="#" id="jubail" class="jubail">
+                        <label class="country-name">Jubail</label>
+                        <span class="store1">1 x Warehouse</span>
+                        <span class="store2">1 x Plant</span>
+                    </a>
+                    <!-- 4 -->
+                    <a href="#" id="riyadh" class="riyadh">
+                        <label class="country-name">Riyadh</label>
+                        <span class="store1">1 x Office</span>
+                    </a>
+                    <!-- 5 -->
+                    <a href="#" id="yanbu" class="yanbu">
+                        <label class="country-name">Yanbu</label>
+                        <span class="store1">1 x Warehouse</span>
+                        <span class="store2">1 x Plant</span>
+                    </a>
+                    <!-- 6 -->
+                    <a href="#" id="jeddah" class="jeddah">
+                        <label class="country-name">JEDDAH</label>
+                        <span class="store1">1 x Warehouse</span>
+                        <span class="store2">1 x Office</span>
+                    </a>
+                </div>
+                <img src="assets/images/contact/map.svg" class="d-map-desk" alt="">
+                <img src="assets/images/contact/map.jpg" class="d-map-mob" alt="">
+            </div>
+            <div class="location-container">
+                <div class="address-container" id="dubai-address">
+                    <h2 id="jeddah">JEDDAH</h2>
+                    <div class="contact-main fade-down">
+                        <ul>
+                            <p>PO BOX 11208, Jeddah 21453 <br> Saudi Arabia</p>
+                            <li><a href=""><span>T</span><label>+966 12 676 2255</label></a></li>
+                            <li><a href=""><span>F</span><label>+966 12 672 1432</label></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="address-container">
+                    <h2 id="yanbu">YANBU</h2>
+                    <div class="contact-main fade-down">
+                        <ul>
+                            <p>PO BOX 30215 Yanbu Al Sinaiyah 51000 <br> Saudi Arabia</p>
+                            <li><a href=""><span>T</span><label>+966 14 325 4210</label></a></li>
+                            <li><a href=""><span>F</span><label>+966 14 325 4360</label></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="address-container">
+                    <h2 id="riyadh">RIYADH</h2>
+                    <div class="contact-main fade-down">
+                        <ul>
+                            <p>PO BOX 30215 Yanbu Al Sinaiyah 51000 <br> Saudi Arabia</p>
+                            <li><a href=""><span>T</span><label>+966 14 325 4210</label></a></li>
+                            <li><a href=""><span>F</span><label>+966 14 325 4360</label></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="address-container">
+                    <h2 id="jubail">JUBAIL</h2>
+                    <div class="contact-main fade-down">
+                        <ul>
+                            <P>PO BOX 30215 Yanbu Al Sinaiyah 51000 <br> Saudi Arabia</P>
+                            <li><a href=""><span>T</span><label>+966 14 325 4210</label></a></li>
+                            <li><a href=""><span>F</span><label>+966 14 325 4360</label></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="address-container">
+                    <h2 id="dubai">dubai</h2>
+                    <div class="contact-main fade-down">
+                        <ul>
+                            <p>P.O. Box 19743, Dubai, <br> United Arab Emirates</p>
+                            <li><a href=""><span>T</span><label>+971 04 251 1557</label></a></li>
+                            <li><a href=""><span>F</span><label>+971 04 234 5183</label></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!-- footer-start -->
-<section class="footer-sec">
-    <div class="container">
-        <div class="ft-middle">
-            <div class="ft-row-flex">
-                <ul class="ft-links1">
-                    <label for="">About BCI</label>
-                    <li><a href="vison.html">Vision & Values</a></li>
-                    <li><a href="">New</a></li>
-                    <li><a href="">Investors</a></li>
-                    <li><a href="career.html">Careers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <ul class="ft-links1">
-                    <label for="">Products</label>
-                    <li><a href="basic-chemical.html">Basic Chemicals</a></li>
-                    <li><a href="industrial-chemical.html">Industrial Chemicals</a></li>
-                    <li><a href="water-treatment.html">Water Treatment</a></li>
-                    <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
-                    <li><a href="">Product Finder</a></li>
-                </ul>
-                <ul class="ft-links1 flex-column">
-                    <label for="">Get in Touch</label>
-                    <li><a href="contact.html" class="btn-main-blue text-black">Contact us</a></li>
-                    <li class="social-icon"><a href="">Follow Us: <img src="assets/images/icons/linkedin.svg" width="22px" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="ft-logo">
-                <a href=""><img src="assets/images/logo-white.svg" alt="" width="120px"></a>
+    <!-- footer-start -->
+    <section class="footer-sec">
+        <div class="container">
+            <div class="ft-middle">
+                <div class="ft-row-flex">
+                    <ul class="ft-links1">
+                        <label for="">About BCI</label>
+                        <li><a href="vison.html">Vision & Values</a></li>
+                        <li><a href="">New</a></li>
+                        <li><a href="">Investors</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <ul class="ft-links1">
+                        <label for="">Products</label>
+                        <li><a href="basic-chemical.html">Basic Chemicals</a></li>
+                        <li><a href="industrial-chemical.html">Industrial Chemicals</a></li>
+                        <li><a href="water-treatment.html">Water Treatment</a></li>
+                        <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+                        <li><a href="">Product Finder</a></li>
+                    </ul>
+                    <ul class="ft-links1 flex-column">
+                        <label for="">Get in Touch</label>
+                        <li><a href="contact.html" class="btn-main-blue text-black">Contact us</a></li>
+                        <li class="social-icon"><a href="">Follow Us: <img src="assets/images/icons/linkedin.svg"
+                                    width="22px" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="ft-logo">
+                    <a href=""><img src="assets/images/logo-white.svg" alt="" width="120px"></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-       <div class="container">
-           <ul>
-            <li><a href="">Privacy policy</a></li>
-            <li><a href="">Terms of Use</a></li>
-            <li><a href="">Site Map</a></li>
-            <li><a href="">Cookie Policy</a></li>
-           </ul>
-           <a href="" class="copyright text-decoration-none">© 2024 BCI </a>
-       </div>
-    </div>
-</section>
-<!-- footer-end -->
+        <div class="footer-bottom">
+            <div class="container">
+                <ul>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Site Map</a></li>
+                    <li><a href="">Cookie Policy</a></li>
+                </ul>
+                <a href="" class="copyright text-decoration-none">© 2024 BCI </a>
+            </div>
+        </div>
+    </section>
+    <!-- footer-end -->
 
 
 
@@ -305,4 +453,5 @@
     <!-- js-close -->
 
 </body>
+
 </html>
