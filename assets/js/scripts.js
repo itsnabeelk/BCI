@@ -296,9 +296,8 @@ document.addEventListener('click', function(event) {
   }
 });
 
+
 // contact-form
-
-
 function toggleContactForm() {
   var contactForm = document.getElementById("contact-form");
   if (contactForm.classList.contains("contact-form-hide")) {
@@ -315,68 +314,3 @@ function toggleContactForm() {
 }
 // close
 
-const countryLinks = document.querySelectorAll('.country-link');
-
-countryLinks.forEach(link => {
-  link.addEventListener('click', navigateToAddressContainer);
-});
-
-function navigateToAddressContainer(event) {
-  event.preventDefault();
-
-  const addressContainerId = this.getAttribute('href').substring(1);
-  const addressContainer = document.getElementById(addressContainerId);
-
-  if (addressContainer) {
-    highlightAddressContainer(addressContainerId);
-    addressContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-}
-
-function highlightAddressContainer(addressContainerId) {
-  const addressContainers = document.querySelectorAll('.address-container');
-  const countryContainers = document.querySelectorAll('.country-container');
-
-  addressContainers.forEach(container => {
-    if (container.id === addressContainerId) {
-      container.classList.add('highlighted');
-      container.style.opacity = '1';
-    } else {
-      container.classList.remove('highlighted');
-      container.style.opacity = '0.1';
-    }
-  });
-
-  countryContainers.forEach(container => {
-    if (container.querySelector('.country-link').getAttribute('href').substring(1) === addressContainerId) {
-      container.classList.add('highlighted');
-      container.style.opacity = '1';
-    } else {
-      container.classList.remove('highlighted');
-      container.style.opacity = '0.1';
-    }
-  });
-
-  // Add event listener to the document for click events
-  document.addEventListener('click', handleClickOutside);
-}
-
-function handleClickOutside(event) {
-  const highlightedElements = document.querySelectorAll('.highlighted');
-
-  // Check if the clicked element is outside of the highlighted elements
-  if (!event.target.closest('.highlighted')) {
-    highlightedElements.forEach(element => {
-      element.classList.remove('highlighted');
-      element.style.opacity = '1';
-    });
-
-    const addressContainers = document.querySelectorAll('.address-container');
-    addressContainers.forEach(container => {
-      container.style.opacity = '1';
-    });
-
-    // Remove the event listener after handling the click outside
-    document.removeEventListener('click', handleClickOutside);
-  }
-}
