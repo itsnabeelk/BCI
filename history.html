@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +16,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
         .navbar {
-    position: relative;
-    width: 100%;
-}
+            position: relative;
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -213,146 +214,175 @@
         </div>
     </nav>
     <!-- close-header -->
-
-
     <nav>
         <div class="container">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
                 <li class="breadcrumb-item"><img src="assets/images/icons/right-blue.svg" alt="/" width="10px" /></li>
-                <li class="breadcrumb-item"><a href="">Business Units</a></li>
+                <li class="breadcrumb-item"><a href="">About</a></li>
                 <li class="breadcrumb-item"><img src="assets/images/icons/right-blue.svg" alt="/" width="10px" /></li>
-                <li class="breadcrumb-item"><label>Basic Chemicals</label></li> 
-              </ol>
+                <li class="breadcrumb-item"><label>The History of BCI</label></li>
+            </ol>
         </div>
     </nav>
 
 
-<section class="business-unit-section">
-    <div class="basic-chemical-icon">
-        <img src="assets/images/business-units/basic-chemical-icon.svg" alt="">
-    </div>
-    <div class="container">
-        <div class="row-controller">
-            <div class="text-container fade-up">
-                <h1>BASIC<br>CHEMICALS</h1>
-                <p>Being one of the earliest Chlor-alkali producers in the
-                    GCC area, BCI’s expertise in producing and distributing
-                    Chlor-alkali derivatives in Saudi Arabia and the region
-                    goes back to its inception days.</p>
+ 
+    <section class="history-section">
+         <div class="container">
+            <div class="history-content">
+                <h2>THE HISTORY OF BCI</h2>
+                <p>
+                    In 1973 Mohanna Abdulaziz Almoaibed set out to establish a chemical manufacturing company in the Eastern
+                    Province of Saudi Arabia, which was a highly unusual business venture at the time.<br><br>
+                    In its early years, the company faced several obstacles, including financing. However, with the support of local
+                    investors and additional financing through international banks, and despite the skepticism on the viability of
+                    the project, Almoaibed and his partners pushed forward and successfully established the very first Chlor-Alkali
+                    manufacturing facility in Saudi Arabia. The Dammam plant started production 1975.
+                </p>
             </div>
-            <div class="image-container fade-left">
-               <img src="assets/images/business-units/basic-chemicals.jpg" alt="">
+         </div>
+    </section>
+
+
+
+    
+    <div class="history-slider">
+        <div class="container custom-container">
+            <div class="history-container">
+                <div class="history-line">
+                </div>
+                <div class="circle-container">
+                    <div class="circle yellow-circle">
+                        <div class="circle-up">
+                            <h4>1967</h4>
+                            <p>BCI ESTABLISHED</p>
+                        </div>
+                    </div>
+                    <div class="circle blue-circle">
+                        <div class="circle-down">
+                            <h4>1976</h4>
+                            <p>DAMMAM CHLOR-ALKALI <br>
+                                PLANT 1 STARTUP</p>
+                        </div>
+                    </div>
+                    <div class="circle green-circle">
+                        <div class="circle-up">
+                            <h4>1983</h4>
+                            <p>DAMMAM CHLOR-ALKALI<br>
+                                PLANT 2 STARTUP</p>
+                        </div>
+                    </div>
+                    <div class="circle dark-circle">
+                        <div class="circle-down">
+                            <h4>1985</h4>
+                            <p>HUNTSMAN JOINT VENTURE<br>
+                                ESTABLISHED</p>
+                        </div>
+                    </div>
+                    <div class="circle dark-green-circle">
+                        <div class="circle-up">
+                            <h4>1992</h4>
+                            <p>ADHESIVES JOINT VENTURE<br>
+                                ESTABLISHED</p>
+                        </div>
+                    </div>
+                    <div class="circle dark-yellow-circle">
+                        <div class="circle-down">
+                            <h4>1994</h4>
+                            <p>DAMMAM CHLOR-ALKALI PLANT <br>
+                                2 EXPANSION</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <script>
+        const circleContainer = document.querySelector('.circle-container');
+        const circles = document.querySelectorAll('.circle');
+
+        // Show the first five circles initially
+        for (let i = 0; i < 5; i++) {
+            circles[i].classList.add('show');
+        }
+
+        // Clone the first circle and append it to the end
+        const firstCircle = document.querySelector('.circle');
+        const clonedCircle = firstCircle.cloneNode(true);
+        circleContainer.appendChild(clonedCircle);
+
+        // Calculate the width of a single circle
+        const circleWidth = firstCircle.offsetWidth;
+
+        // Position the circle container at the left side
+        circleContainer.style.position = 'relative';
+        circleContainer.style.left = `-${circleWidth}px`;
+
+        // Start animating the circles one by one after a delay
+        function animateCircles(index) {
+            if (index < circles.length) {
+                setTimeout(() => {
+                    circles[index].classList.add('show');
+                    circleContainer.style.left = `-${(index + 2) * circleWidth}px`;
+                    animateCircles(index + 1);
+                }, 1000); // Adjust the delay time (in milliseconds) between each circle animation
+            }
+        }
+
+        // Call the animateCircles function to start the animation
+        animateCircles(5);
+    </script>
+
+
+
+    <!-- footer-start -->
+    <section class="footer-sec">
+        <div class="container">
+            <div class="ft-middle">
+                <div class="ft-row-flex">
+                    <ul class="ft-links1">
+                        <label for="">About BCI</label>
+                        <li><a href="vison.html">Vision & Values</a></li>
+                        <li><a href="">New</a></li>
+                        <li><a href="">Investors</a></li>
+                        <li><a href="career.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                    <ul class="ft-links1">
+                        <label for="">Products</label>
+                        <li><a href="basic-chemical.html">Basic Chemicals</a></li>
+                        <li><a href="industrial-chemical.html">Industrial Chemicals</a></li>
+                        <li><a href="water-treatment.html">Water Treatment</a></li>
+                        <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
+                        <li><a href="">Product Finder</a></li>
+                    </ul>
+                    <ul class="ft-links1 flex-column">
+                        <label for="">Get in Touch</label>
+                        <li><a href="contact.html" class="btn-main-blue text-black">Contact us</a></li>
+                        <li class="social-icon"><a href="">Follow Us: <img src="assets/images/icons/linkedin.svg"
+                                    width="22px" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="ft-logo">
+                    <a href=""><img src="assets/images/logo-white.svg" alt="" width="120px"></a>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container mt-5">
-        <div class="sub-container">
-            <p>Our Basic Chemicals division caters to customer requirements in the below chemistries:</p>
-            <div class="row">
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="your-link-here" class="card-body text-dark">
-                    Liquid Chlorine
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="your-link-here" class="card-body text-dark">
-                    Sodium Hypochlorite 12.5%
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="your-link-here" class="card-body text-dark">
-                    Sulphuric Acid 98%
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="your-link-here" class="card-body text-dark">
-                    Caustic Soda (32%, 49%, flakes)
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="your-link-here" class="card-body text-dark">
-                    Hydrochloric Acid 31%
-                  </a>
-                </div>
-              </div>
-              <div class="col-md-4 mb-4">
-                <div class="card">
-                  <a href="your-link-here" class="card-body text-dark">
-                    Battery Acid and Electrolytes
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-    </div>
-    <div class="container mt-5 mb-5">
-        <div class="button-container">
-            <a href=""><img src="assets/images/icons/search-icon.svg" alt="" width="50px"><h3>FIND BASIC CHEMICALS PRODUCTS</h3></a>
-      </div>
-    </div>
-</section>
-
-
-
-
-
-<!-- footer-start -->
-<section class="footer-sec">
-    <div class="container">
-        <div class="ft-middle">
-            <div class="ft-row-flex">
-                <ul class="ft-links1">
-                    <label for="">About BCI</label>
-                    <li><a href="vison.html">Vision & Values</a></li>
-                    <li><a href="">New</a></li>
-                    <li><a href="">Investors</a></li>
-                    <li><a href="career.html">Careers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+        <div class="footer-bottom">
+            <div class="container">
+                <ul>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Site Map</a></li>
+                    <li><a href="">Cookie Policy</a></li>
                 </ul>
-                <ul class="ft-links1">
-                    <label for="">Products</label>
-                    <li><a href="basic-chemical.html">Basic Chemicals</a></li>
-                    <li><a href="industrial-chemical.html">Industrial Chemicals</a></li>
-                    <li><a href="water-treatment.html">Water Treatment</a></li>
-                    <li><a href="contract-manufacturing.html">Contract Manufacturing</a></li>
-                    <li><a href="">Product Finder</a></li>
-                </ul>
-                <ul class="ft-links1 flex-column">
-                    <label for="">Get in Touch</label>
-                    <li><a href="contact.html" class="btn-main-blue text-black">Contact us</a></li>
-                    <li class="social-icon"><a href="">Follow Us: <img src="assets/images/icons/linkedin.svg" width="22px" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="ft-logo">
-                <a href=""><img src="assets/images/logo-white.svg" alt="" width="120px"></a>
+                <a href="" class="copyright text-decoration-none">© 2024 BCI </a>
             </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-       <div class="container">
-           <ul>
-            <li><a href="">Privacy policy</a></li>
-            <li><a href="">Terms of Use</a></li>
-            <li><a href="">Site Map</a></li>
-            <li><a href="">Cookie Policy</a></li>
-           </ul>
-           <a href="" class="copyright text-decoration-none">© 2024 BCI </a>
-       </div>
-    </div>
-</section>
-<!-- footer-end -->
-
-
+    </section>
+    <!-- footer-end -->
 
     <!-- js-start -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
