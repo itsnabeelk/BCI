@@ -1,5 +1,7 @@
 @charset "UTF-8";
-
+html {
+  scroll-behavior: smooth;
+}
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,18 @@
   outline: none;
   list-style: none;
 }
+body::-webkit-scrollbar {
+  width: 8px;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
 
+body::-webkit-scrollbar-thumb {
+  background-color: #00c1de;
+  outline: 1px solid #00c1de;
+}
 body {
   color: #1a1a1a;
   background-color: #fff;
@@ -395,6 +408,10 @@ body.loaded {
 /* navbar-mega */
 .navbar .megamenu {
   padding: 1rem;
+}
+.custom-navbar{
+    position: relative !important;
+    width: 100% !important;
 }
 
 @media all and (min-width: 1201px) {
@@ -3106,48 +3123,23 @@ margin-bottom: 20px;
   }
 }
 
-/* close-history */
-
-.history-slider {
-  position: relative;
-  height: 200px;
-  height: 400px;
-}
-
-.custom-container {
-  position: relative;
-  overflow: hidden;
-  height: 400px;
-}
-.history-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-}
-
 .history-line {
   height: 1px;
   background-color: #dcdcdc;
+  top: 250px;
+  position: relative;
 }
-
-.circle-container {
-  display: flex;
-  justify-content: space-around;
-  animation: slide-left 20s linear infinite;
-  white-space: nowrap;
-  gap: 40%;
-}
-
 .circle {
   height: 30px;
   width: 30px;
   border-radius: 50%;
   margin: 0 5px;
-  opacity: 0;
   transition: opacity 0.5s ease-in-out;
   position: relative;
-  top: -15px;
+}
+.circle p{
+ width: 220px;
+ font-size: 14px;
 }
 .yellow-circle{
   background-color: #ffb71b;
@@ -3270,11 +3262,50 @@ margin-bottom: 20px;
   bottom: 160px;
 }
 
-@keyframes slide-left {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(calc(-100% - 35px));
-  }
+.carousel-wrap {
+  position: relative;
 }
+
+.owl-carousel .item {
+  position: relative;
+  z-index: 100; 
+  -webkit-backface-visibility: hidden; 
+}
+.owl-nav{
+  display: none;
+}
+
+.owl-carousel.owl-drag .owl-item {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width:600px) {
+  .owl-carousel.owl-drag .owl-item {
+    justify-content: center;
+}
+}
+.history-container {
+  position: relative;
+  width: 100%;
+  z-index: -1;
+}
+.history-wrap {
+  position: relative;
+  top: -80px;
+}
+/* close-history */
+
+.breadcrumb-custom {
+  position: absolute;
+  width: 100%;
+  top: 110px;
+  background: #ffffffc9;
+}
+
+
+/*###########################################################################
+                                  END-CSS
+/*###########################################################################*/

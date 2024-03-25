@@ -10,16 +10,10 @@
     <meta name="author" content="">
     <title>BCI</title>
     <link rel="icon" id="favicon" href="assets/images/fav-light.png">
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/plugins.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .navbar {
-            position: relative;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body>
@@ -45,7 +39,7 @@
 
 
     <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-dark mega-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark mega-navbar custom-navbar">
         <div class="container">
             <a class="navbar-brand d-mob-block" href="index.html"><img src="assets/images/logo-white.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
@@ -61,7 +55,8 @@
                             <div class="container">
                                 <label class="megamenu-titile">ABOUT BCI</label>
                                 <ul class="navbar-nav flex-column custom-mega-drop">
-                                    <li class="nav-item"><a class="nav-link-c" href="history.html">THE HISTORY OF BCI</a></li>
+                                    <li class="nav-item"><a class="nav-link-c" href="history.html">THE HISTORY OF
+                                            BCI</a></li>
                                     <li class="nav-item"><a class="nav-link-c" href="tagline.html">OUR TAGLINE</a></li>
                                     <li class="nav-item"><a class="nav-link-c" href="vison.html">VISION & VALUES</a>
                                     </li>
@@ -296,7 +291,8 @@
         <div class="container">
             <div class="map">
                 <div class="country-container">
-                    <a href="#dubai-address" id="dubai" class="dubai country-link" onclick="highlightAddressContainer('dubai-address')">
+                    <a href="#dubai-address" id="dubai" class="dubai country-link"
+                        onclick="highlightAddressContainer('dubai-address')">
                         <label class="country-name">Dubai</label>
                         <span class="store1">1 x Warehouse</span>
                         <span class="store2">1 x Office</span>
@@ -446,12 +442,37 @@
 
     <!-- js-start -->
     <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/smoother-script.js"></script>
     <script src="assets/js/scripts.js"></script>
     <!-- js-close -->
-
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            navText: [
+                "<i class='fa fa-caret-left'></i>",
+                "<i class='fa fa-caret-right'></i>"
+            ],
+            autoplay: true,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>
