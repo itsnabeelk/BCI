@@ -142,7 +142,7 @@ $(document).ready(function () {
 
 
 // slider
-$(document).ready(function() {
+$(window).on('load', function() {
     var bannerSlider = $('.banner-container');
   
     bannerSlider.slick({
@@ -172,8 +172,8 @@ $(document).ready(function() {
       $('.banner-text').eq(currentSlide).addClass('animate');
     });
   });
-
 //close
+
 $(window).on('hashchange', function() {
     if (window.location.hash !== '#details') {
       $('.details').removeClass('show');
@@ -201,3 +201,118 @@ $(window).on('hashchange', function() {
       parent.find('.icon-none').show();
     }
   });
+
+// fade-up  
+const fadeUpElements = document.querySelectorAll('.fade-up');
+const fadeDownElements = document.querySelectorAll('.fade-down');
+const fadeLeftElements = document.querySelectorAll('.fade-left');
+const fadeRightElements = document.querySelectorAll('.fade-right');
+
+const fadeUpObserver = createIntersectionObserver(fadeUpElements, 'fade-up-show', 'fadeUpAnimation');
+const fadeDownObserver = createIntersectionObserver(fadeDownElements, 'fade-down-show', 'fadeDownAnimation');
+const fadeLeftObserver = createIntersectionObserver(fadeLeftElements, 'fade-left-show', 'fadeLeftAnimation');
+const fadeRightObserver = createIntersectionObserver(fadeRightElements, 'fade-right-show', 'fadeRightAnimation');
+
+function createIntersectionObserver(elements, showClass, animationName) {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(showClass);
+      } else {
+        entry.target.classList.remove(showClass);
+      }
+    });
+  });
+
+  elements.forEach(element => {
+    observer.observe(element);
+  });
+
+  return observer;
+}
+
+// fade-up-close
+
+
+// fav-dark and light
+  function setFavicon() {
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const favicon = document.querySelector('link[rel="shortcut icon"]');
+    
+    if (isDarkMode) {
+      favicon.href = 'assets/images/fav-dark.png';
+    } else {
+      favicon.href = 'assets/images/fav-light.png';
+    }
+  }
+  setFavicon();
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setFavicon);
+// close
+
+
+// products-tab
+function toggleProduct(event, productId) {
+  event.preventDefault();
+
+  var productItems = document.getElementsByClassName('product-item');
+  var products = document.getElementsByClassName('content-container');
+
+  // Remove the active class from all product items and products
+  for (var i = 0; i < productItems.length; i++) {
+      productItems[i].classList.remove('active');
+  }
+
+  for (var j = 0; j < products.length; j++) {
+      products[j].classList.remove('active');
+      products[j].querySelector('.icon1').style.display = 'block';
+      products[j].querySelector('.icon2').style.display = 'none';
+  }
+
+  // Add the active class to the clicked product item and product
+  document.getElementById(productId).classList.add('active');
+  event.currentTarget.parentElement.classList.add('active');
+  event.currentTarget.querySelector('.icon1').style.display = 'none';
+  event.currentTarget.querySelector('.icon2').style.display = 'block';
+}
+
+// close
+
+function toggleDropdown(event) {
+  event.preventDefault();
+  var dropdownBtn = event.target.closest('.dropdown-btn');
+  var dropdownTable = dropdownBtn.nextElementSibling;
+
+  dropdownBtn.classList.toggle('active');
+  dropdownTable.classList.toggle('active');
+}
+
+document.addEventListener('click', function(event) {
+  var dropdownBtn = event.target.closest('.dropdown-btn');
+  var dropdownTable = document.querySelector('.dropdown-table');
+
+  if (dropdownBtn === null && dropdownTable.classList.contains('active')) {
+      dropdownTable.classList.remove('active');
+      document.querySelector('.dropdown-btn.active').classList.remove('active');
+  }
+});
+
+
+// contact-form
+function toggleContactForm() {
+  var contactForm = document.getElementById("contact-form");
+  if (contactForm.classList.contains("contact-form-hide")) {
+    contactForm.style.display = "block";
+    setTimeout(function() {
+      contactForm.classList.remove("contact-form-hide");
+    }, 10);
+  } else {
+    contactForm.classList.add("contact-form-hide");
+    setTimeout(function() {
+      contactForm.style.display = "none";
+    }, 500);
+  }
+}
+// close
+
+
+
