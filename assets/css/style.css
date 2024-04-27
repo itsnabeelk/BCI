@@ -529,13 +529,23 @@ body.loaded {
     margin-bottom: 50px;
   }
 }
-
 .sub-dropdown {
-  margin-left: 350px;
-  border: none;
-  padding: inherit;
-  top: 0 !important;
-  margin-top: 0 !important;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  left: 295px;
+  top: 0;
+  padding: 0 25px !important;
+}
+.sub-dropdown {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.nav-link-c:hover + .sub-dropdown,
+.sub-dropdown:hover {
+  display: block;
+  opacity: 1;
 }
 
 .sub-dropdown .dropdown-item {
@@ -566,6 +576,7 @@ body.loaded {
     margin-bottom: 0;
   }
 }
+
 
 .navbar-dark .navbar-nav .nav-link {
   transition: 0.5s cubic-bezier(0, 0, 0.2, 1);
@@ -3309,3 +3320,4 @@ margin-bottom: 20px;
 /*###########################################################################
                                   END-CSS
 /*###########################################################################*/
+
