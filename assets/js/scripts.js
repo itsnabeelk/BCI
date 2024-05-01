@@ -1,39 +1,4 @@
 
-
-// cursor animation
-(function () {
-    const link = document.querySelectorAll('.hover-this');
-    const cursor = document.querySelector('.cursor');
-    const animateit = function (e) {
-        const hoverAnim = this.querySelector('.hover-anim');
-        const { offsetX: x, offsetY: y } = e,
-            { offsetWidth: width, offsetHeight: height } = this,
-            move = 25,
-            xMove = x / width * (move * 2) - move,
-            yMove = y / height * (move * 2) - move;
-        hoverAnim.style.transform = `translate(${xMove}px, ${yMove}px)`;
-        if (e.type === 'mouseleave') hoverAnim.style.transform = '';
-    };
-    const editCursor = e => {
-        const { clientX: x, clientY: y } = e;
-        cursor.style.left = x + 'px';
-        cursor.style.top = y + 'px';
-    };
-    link.forEach(b => b.addEventListener('mousemove', animateit));
-    link.forEach(b => b.addEventListener('mouseleave', animateit));
-    window.addEventListener('mousemove', editCursor);
-
-    $("a, .cursor-pointer").hover(
-        function () {
-            $(".cursor").addClass("cursor-active");
-        }, function () {
-            $(".cursor").removeClass("cursor-active");
-        }
-    );
-
-})();
-// close
-
 //  loader and up button
 
 $(window).on("load", function () {
@@ -92,7 +57,6 @@ $(document).ready(function () {
     });
     tl.to(svg, {
         duration: 0.5,
-        attr: { d: curve },
         ease: "power2.easeIn",
     }).to(svg, {
         duration: 0.5,
@@ -125,6 +89,48 @@ $(document).ready(function () {
 
 });
 // close
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var dropdown = document.getElementById("basic-dropdown");
+  var dropdownShow = document.getElementById("basic-dropdown-show");
+  var isDropdownVisible = false;
+
+  dropdown.addEventListener("mouseover", function() {
+    dropdownShow.style.display = "block";
+    isDropdownVisible = true;
+  });
+
+  dropdown.addEventListener("mouseout", function(e) {
+    var target = e.relatedTarget;
+    if (!dropdown.contains(target)) {
+      isDropdownVisible = false;
+      setTimeout(function() {
+        if (!isDropdownVisible) {
+          dropdownShow.style.display = "none";
+        }
+      }, 100); // Set a delay before hiding the dropdown (adjust the duration as needed)
+    }
+  });
+
+  dropdownShow.addEventListener("mouseover", function() {
+    isDropdownVisible = true;
+  });
+
+  dropdownShow.addEventListener("mouseout", function(e) {
+    var target = e.relatedTarget;
+    if (!dropdown.contains(target)) {
+      isDropdownVisible = false;
+      setTimeout(function() {
+        if (!isDropdownVisible) {
+          dropdownShow.style.display = "none";
+        }
+      }, 100); // Set a delay before hiding the dropdown (adjust the duration as needed)
+    }
+  });
+});
+
 
 // dropdown-active
 
@@ -175,32 +181,52 @@ $(window).on('load', function() {
 //close
 
 $(window).on('hashchange', function() {
-    if (window.location.hash !== '#details') {
-      $('.details').removeClass('show');
-      $('.btn-down').removeClass('rotate');
-      $('.icon-active').hide();
-      $('.icon-none').show();
-      $('.icon-sr').removeClass('show-details');
-    }
-  });
-  
-  $('.btn-down').click(function(e) {
-    e.preventDefault();
-    var parent = $(this).closest('.icon-sr');
+  if (window.location.hash !== '#details') {
+    $('.details').removeClass('show');
+    $('.btn-down').removeClass('rotate');
+    $('.icon-active').hide();
+    $('.icon-none').show();
+    $('.icon-sr').removeClass('show-details');
+  } else {
+    // Close other .show-details elements
+    $('.icon-sr').not($(window.location.hash)).removeClass('show-details');
+    $(window.location.hash).toggleClass('show-details');
+    $('.icon-sr').not($(window.location.hash)).find('.details').removeClass('show');
+    $('.icon-sr').not($(window.location.hash)).find('.icon-active').hide();
+    $('.icon-sr').not($(window.location.hash)).find('.icon-none').show();
+  }
+});
+
+$('.icon-sr').hover(
+  function() {
+    var parent = $(this);
     var details = parent.find('.details');
-    
-    details.toggleClass('show');
-    parent.find('.btn-down').toggleClass('rotate');
-    parent.toggleClass('show-details');
-    
-    if (details.hasClass('show')) {
-      parent.find('.icon-active').show();
-      parent.find('.icon-none').hide();
-    } else {
-      parent.find('.icon-active').hide();
-      parent.find('.icon-none').show();
-    }
-  });
+
+    $('.details').not(details).removeClass('show');
+    $('.icon-active').not(parent.find('.icon-active')).hide();
+    $('.icon-none').not(parent.find('.icon-none')).show();
+    $('.btn-down').not(parent.find('.btn-down')).removeClass('rotate');
+    $('.icon-sr').not(parent).removeClass('show-details');
+
+    details.addClass('show');
+    parent.find('.btn-down').addClass('rotate');
+    parent.addClass('show-details');
+
+    parent.find('.icon-active').show();
+    parent.find('.icon-none').hide();
+  },
+  function() {
+    var parent = $(this);
+    var details = parent.find('.details');
+
+    details.removeClass('show');
+    parent.find('.btn-down').removeClass('rotate');
+    parent.removeClass('show-details');
+
+    parent.find('.icon-active').hide();
+    parent.find('.icon-none').show();
+  }
+);
 
 // fade-up  
 const fadeUpElements = document.querySelectorAll('.fade-up');
@@ -297,6 +323,8 @@ document.addEventListener('click', function(event) {
 });
 
 
+
+
 // contact-form
 function toggleContactForm() {
   var contactForm = document.getElementById("contact-form");
@@ -313,5 +341,6 @@ function toggleContactForm() {
   }
 }
 // close
+
 
 

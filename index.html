@@ -29,7 +29,6 @@
         </div>
     </div>
 
-    <div class="cursor"></div>
     <!-- ==================== Start progress-scroll-button ==================== -->
     <div class="progress-wrap cursor-pointer">
         <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
@@ -112,7 +111,7 @@
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="nav-item dropdown ">
+                                    <li class="nav-item">
                                         <a class="nav-link-c navlink-sub dropdown-toggle" href="#"
                                             data-bs-toggle="dropdown">CONTRACT
                                             MANUFACTURING
@@ -123,12 +122,6 @@
                                                 </g>
                                             </svg>
                                         </a>
-                                        <div class="dropdown-menu sub-dropdown" role="menu">
-                                            <p>Speak to a BCI representatives to <br> find out how we can help you</p>
-                                            <a class="dropdown-item btn-ct" href="contract-manufacturing.html">
-                                                CONTACT US TODAY
-                                            </a>
-                                        </div>
                                     </li>
                                 </ul>
                             </div>
@@ -139,62 +132,68 @@
                         <div class="dropdown-menu megamenu" role="menu">
                             <div class="container">
                                 <label class="megamenu-titile">PRODUCTS</label>
-                                <ul class="navbar-nav flex-column custom-mega-drop">
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link-c navlink-sub dropdown-toggle" href="">BASIC CHEMICALS
-                                            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.79 13.43"
-                                                style="width:8px;">
+                                <div class="mega-menu-drop">
+                                    <ul class="navbar-nav flex-column custom-mega-drop">
+                                        <li class="nav-item" id="basic-dropdown">
+                                            <a class="nav-link-c" href="javascript:void(0);">BASIC CHEMICALS
+                                              <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.79 13.43" style="width:8px;">
                                                 <g id="Layer_1-2" data-name="Layer 1-2">
-                                                    <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
+                                                  <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
                                                 </g>
-                                            </svg>
-                                        </a>
-                                        <div class="dropdown-menu sub-dropdown" role="menu">
-                                            <a class="dropdown-item" href="product-inner.html">Caustic Soda 32%</a>
-                                            <a class="dropdown-item" href="#">Caustic Soda 49%</a>
-                                            <a class="dropdown-item" href="#">Caustic Soda flakes</a>
-                                            <a class="dropdown-item" href="#">Sodium Hypochlorite 12.5</a>
-                                            <a class="dropdown-item" href="#">Hydrochloric Acid 31%</a>
-                                            <a class="dropdown-item" href="#">Sulphuric Acid 98%</a>
-                                            <a class="dropdown-item" href="#">Battery Acid and Electrolytes</a>
+                                              </svg>
+                                            </a>
+                                          </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link-c navlink-sub dropdown-toggle" href="javascript:void(0);">INDUSTRIAL CHEMICALS
+                                                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 5.79 13.43" style="width:8px;">
+                                                    <g id="Layer_1-2" data-name="Layer 1-2">
+                                                        <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link-c" href="javascript:void(0);">WATER TREATMENT
+                                                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 5.79 13.43" style="width:8px;">
+                                                    <g id="Layer_1-2" data-name="Layer 1-2">
+                                                        <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                            <div class="dropdown-menu sub-dropdown" role="menu">
+                                                <a class="dropdown-item" href="product-inner.html">Caustic Soda 32%</a>
+                                                <a class="dropdown-item" href="#">Caustic Soda 49%</a>
+                                                <a class="dropdown-item" href="#">Caustic Soda flakes</a>
+                                                <a class="dropdown-item" href="#">Sodium Hypochlorite 12.5</a>
+                                                <a class="dropdown-item" href="#">Hydrochloric Acid 31%</a>
+                                                <a class="dropdown-item" href="#">Sulphuric Acid 98%</a>
+                                                <a class="dropdown-item" href="#">Battery Acid and Electrolytes</a>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item"><a class="nav-link-c" href="javascript:void(0);">CONTRACT MANUFACTURING
+                                                <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 5.79 13.43" style="width:8px;">
+                                                    <g id="Layer_1-2" data-name="Layer 1-2">
+                                                        <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
+                                                    </g>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="sub-new-menu" role="menu">
+                                        <div id="basic-dropdown-show">
+                                            <a class="linkes-sub " href="product-inner.html">Caustic Soda 32%</a>
+                                            <a class="linkes-sub " href="#">Caustic Soda 49%</a>
+                                            <a class="linkes-sub " href="#">Caustic Soda flakes</a>
+                                            <a class="linkes-sub " href="#">Sodium Hypochlorite 12.5</a>
+                                            <a class="linkes-sub " href="#">Hydrochloric Acid 31%</a>
+                                            <a class="linkes-sub " href="#">Sulphuric Acid 98%</a>
+                                            <a class="linkes-sub " href="#">Battery Acid and Electrolytes</a>
                                         </div>
-                                    </li>
-                                    <li class="nav-item dropdown">
-                                        <a class="nav-link-c navlink-sub dropdown-toggle" href="#">INDUSTRIAL CHEMICALS
-                                            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 5.79 13.43" style="width:8px;">
-                                                <g id="Layer_1-2" data-name="Layer 1-2">
-                                                    <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
-                                                </g>
-                                            </svg>
-                                        </a>
-                                        <div class="dropdown-menu sub-dropdown" role="menu">
-                                            <a class="dropdown-item" href="product-inner.html">Caustic Soda 32%</a>
-                                            <a class="dropdown-item" href="#">Caustic asasa 49%</a>
-                                            <a class="dropdown-item" href="#">Caustic Soda flakes</a>
-                                            <a class="dropdown-item" href="#">Sodium Hypochlorite 12.5</a>
-                                            <a class="dropdown-item" href="#">Hydrochloric Acid 31%</a>
-                                            <a class="dropdown-item" href="#">Sulphuric Acid 98%</a>
-                                            <a class="dropdown-item" href="#">Battery Acid and Electrolytes</a>
-                                        </div>
-                                    </li>
-                                    <li class="nav-item"><a class="nav-link-c" href="#">WATER TREATMENT
-                                            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 5.79 13.43" style="width:8px;">
-                                                <g id="Layer_1-2" data-name="Layer 1-2">
-                                                    <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
-                                                </g>
-                                            </svg>
-                                        </a></li>
-                                    <li class="nav-item"><a class="nav-link-c" href="#">CONTRACT MANUFACTURING
-                                            <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 5.79 13.43" style="width:8px;">
-                                                <g id="Layer_1-2" data-name="Layer 1-2">
-                                                    <polyline class="cls-11" points=".25 13.18 5.54 6.72 .25 .25" />
-                                                </g>
-                                            </svg>
-                                        </a></li>
-                                </ul>
+                                      </div>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -209,7 +208,6 @@
                                     <li class="nav-item">
                                         <a class="nav-link-c" href="#">
                                             VIEW OUR COMPANY PROFILE <br>
-                                            (opens external link)
                                             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 5.79 13.43" style="width:8px;">
                                                 <g id="Layer_1-2" data-name="Layer 1-2">
@@ -391,7 +389,7 @@
                     <ul class="ft-links1">
                         <label for="">About BCI</label>
                         <li><a href="vison.html">Vision & Values</a></li>
-                        <li><a href="">New</a></li>
+                        <li><a href="">News</a></li>
                         <li><a href="">Investors</a></li>
                         <li><a href="career.html">Careers</a></li>
                         <li><a href="contact.html">Contact</a></li>
@@ -441,6 +439,7 @@
     <script src="assets/js/scripts.js"></script>
     <!-- js-close -->
     <script>
+        
         $('.owl-carousel').owlCarousel({
             loop: true,
             margin: 10,
