@@ -40,11 +40,11 @@
     <!-- header -->
     <nav class="navbar navbar-expand-lg navbar-dark mega-navbar">
         <div class="container">
-            <div class="top-header">
+            <!-- <div class="top-header">
                 <a href="">العربية</a>
                 <span></span>
                 <a href="">English</a>
-            </div>
+            </div> -->
             <a class="navbar-brand d-mob-block" href="index.html"><img src="assets/images/logo-white.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
                 <span class="navbar-toggler-icon"></span>
@@ -112,7 +112,7 @@
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link-c navlink-sub dropdown-toggle" href="#"
+                                        <a class="nav-link-c navlink-sub dropdown-toggle" href="javascript:void(0);"
                                             data-bs-toggle="dropdown">CONTRACT
                                             MANUFACTURING
                                             <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +134,7 @@
                                 <label class="megamenu-titile">PRODUCTS</label>
                                 <div class="mega-menu-drop">
                                     <ul class="navbar-nav flex-column custom-mega-drop">
-                                        <li class="nav-item" id="basic-dropdown">
+                                        <li class="nav-item dropdown" id="basic-dropdown">
                                             <a class="nav-link-c" href="javascript:void(0);">BASIC CHEMICALS
                                               <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5.79 13.43" style="width:8px;">
                                                 <g id="Layer_1-2" data-name="Layer 1-2">
@@ -142,6 +142,16 @@
                                                 </g>
                                               </svg>
                                             </a>
+                                            <div class="dropdown-menu sub-dropdown">
+                                                <div class="mob-submenu">
+                                                    <a class="linkes-sub" href="basic-chemical.html">Liquid Chlorine</a>
+                                                    <a class="linkes-sub" href="basic-chemical.html">CSodium Hypochlorite 12.5%</a>
+                                                    <a class="linkes-sub" href="basic-chemical.html">Sulphuric Acid 98%</a>
+                                                    <a class="linkes-sub" href="basic-chemical.html">Caustic Soda (32%, 49%, flakes)</a>
+                                                    <a class="linkes-sub" href="basic-chemical.html">Hydrochloric Acid 31%</a>
+                                                    <a class="linkes-sub" href="basic-chemical.html">Battery Acid and Electrolytes</a>
+                                                </div>
+                                            </div>
                                           </li>
                                         <li class="nav-item">
                                             <a class="nav-link-c navlink-sub dropdown-toggle" href="javascript:void(0);">INDUSTRIAL CHEMICALS
@@ -153,7 +163,7 @@
                                                 </svg>
                                             </a>
                                         </li>
-                                        <li class="nav-item">
+                                        <li class="nav-item dropdown" id="water-dropdown">
                                             <a class="nav-link-c" href="javascript:void(0);">WATER TREATMENT
                                                 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
                                                     viewBox="0 0 5.79 13.43" style="width:8px;">
@@ -162,6 +172,16 @@
                                                     </g>
                                                 </svg>
                                             </a>
+                                            <div class="dropdown-menu sub-dropdown">
+                                                <div class="mob-submenu">
+                                                    <a class="linkes-sub" href="water-treatment.html">Oxygen scavengers</a>
+                                                    <a class="linkes-sub" href="water-treatment.html">Corrosion and scale inhibitors</a>
+                                                    <a class="linkes-sub" href="water-treatment.html">Dispersants, biocides, and algaecide</a>
+                                                    <a class="linkes-sub" href="water-treatment.html">Antifoams</a>
+                                                    <a class="linkes-sub" href="water-treatment.html">Flocculants and coagulants</a>
+                                                    <a class="linkes-sub link-activate" href="water-treatment.html">Know More</a>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li class="nav-item"><a class="nav-link-c" href="javascript:void(0);">CONTRACT MANUFACTURING
                                                 <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg"
@@ -176,13 +196,31 @@
                                     <div class="sub-new-menu" role="menu">
                                         <div id="basic-dropdown-show">
                                             <div class="d-grid-hook">
-                                                <a class="linkes-sub " href="product-inner.html">Caustic Soda 32%</a>
-                                                <a class="linkes-sub " href="#">Caustic Soda 49%</a>
-                                                <a class="linkes-sub " href="#">Caustic Soda flakes</a>
-                                                <a class="linkes-sub " href="#">Sodium Hypochlorite 12.5</a>
-                                                <a class="linkes-sub " href="#">Hydrochloric Acid 31%</a>
-                                                <a class="linkes-sub " href="#">Sulphuric Acid 98%</a>
-                                                <a class="linkes-sub " href="#">Battery Acid and Electrolytes</a>
+                                                <a class="linkes-sub" href="basic-chemical.html">Liquid Chlorine</a>
+                                                <a class="linkes-sub" href="basic-chemical.html">CSodium Hypochlorite 12.5%</a>
+                                                <a class="linkes-sub" href="basic-chemical.html">Sulphuric Acid 98%</a>
+                                                <a class="linkes-sub" href="basic-chemical.html">Caustic Soda (32%, 49%, flakes)</a>
+                                                <a class="linkes-sub" href="basic-chemical.html">Hydrochloric Acid 31%</a>
+                                                <a class="linkes-sub" href="basic-chemical.html">Battery Acid and Electrolytes</a>
+                                            </div>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div id="water-dropdown-show">
+                                            <div class="d-grid-hook">
+                                                <a class="linkes-sub" href="water-treatment.html">Oxygen scavengers</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Corrosion and scale inhibitors</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Dispersants, biocides, and algaecide</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Antifoams</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Flocculants and coagulants</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Activated carbons</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Ion-exchange resins</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Ferric chloride 40%</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Desalination Plants - Reverse Osmosis and MSF</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Waste and effluent treatment systems</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Boiler water systems</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Cooling and chilling systems</a>
+                                                <a class="linkes-sub" href="water-treatment.html">Potable and firewater systems</a>
+                                                <a class="linkes-sub link-activate" href="water-treatment.html">Know More</a>
                                             </div>
                                         </div>
                                       </div>
@@ -247,45 +285,8 @@
                 </div>
             </div>
         </div>
-
         <div class="wave-container">
-            <!-- <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2402.93 109.02">
-                <g class="cls-7 wave1">
-                    <path class="cls-1 wave1"
-                        d="M2019.41,69.41s-120.49-15.2-575.91-15.06c-150.17.05-343.49,3.59-470.89,7.18-192.42,5.42-232.15,12.11-425.57,11.33-56.6-.23-108.98-1.62-156.74-3.98-92.32-4.56-163.45-11.76-218.97-18.95-72.83-9.42-117.69-18.42-117.69-18.42" />
-                    <path class="cls-5 wave2" d="M.02,74.42c1154.33-14.13,959.67-87.69,2402.86-14.69" />
-                    <path class="cls-3 wave3"
-                        d="M55.97,50.28s204.15-17.29,513.21-22.1c58.33-.91,190.2-2.53,312.8.34,118.95,2.78,245.33,12.31,441.05,17.55,86.19,2.31,185.1,4.13,303.98,3.59,273.03-1.24,370-17.69,370-17.69" />
-                    <path class="cls-6 wave4"
-                        d="M55.73,59.54s181.96,17.16,491.03,19.12c212.25,1.35,349.68-5.78,519.81-10.5,96.35-2.67,195.36-4.43,299.56-4.01,309.51,1.24,389.25,10.95,485.26,21.69,77.61,8.68,308.23,33.14,395.08,16.5" />
-                    <path class="cls-2 wave5"
-                        d="M2013.6,74.42c-142.29,1.84-142.29-29.82-321.64-31.63-233.04-2.35-181.7,23.8-477.47,25.18C797.44,69.9,836.91,7.14,.02,25.72" />
-                </g>
-                <g class="cls-7 wave2">
-                    <path class="cls-1 wave1"
-                        d="M2019.41,69.41s-120.49-15.2-575.91-15.06c-150.17.05-343.49,3.59-470.89,7.18-192.42,5.42-232.15,12.11-425.57,11.33-56.6-.23-108.98-1.62-156.74-3.98-92.32-4.56-163.45-11.76-218.97-18.95-72.83-9.42-117.69-18.42-117.69-18.42" />
-                    <path class="cls-5 wave2" d="M.02,74.42c1154.33-14.13,959.67-87.69,2402.86-14.69" />
-                    <path class="cls-3 wave3"
-                        d="M55.97,50.28s204.15-17.29,513.21-22.1c58.33-.91,190.2-2.53,312.8.34,118.95,2.78,245.33,12.31,441.05,17.55,86.19,2.31,185.1,4.13,303.98,3.59,273.03-1.24,370-17.69,370-17.69" />
-                    <path class="cls-6 wave4"
-                        d="M55.73,59.54s181.96,17.16,491.03,19.12c212.25,1.35,349.68-5.78,519.81-10.5,96.35-2.67,195.36-4.43,299.56-4.01,309.51,1.24,389.25,10.95,485.26,21.69,77.61,8.68,308.23,33.14,395.08,16.5" />
-                    <path class="cls-2 wave5"
-                        d="M2013.6,74.42c-142.29,1.84-142.29-29.82-321.64-31.63-233.04-2.35-181.7,23.8-477.47,25.18C797.44,69.9,836.91,7.14,.02,25.72" />
-                </g>
-                <g class="cls-7">
-                    <path class="cls-1 wave1"
-                        d="M2019.41,69.41s-120.49-15.2-575.91-15.06c-150.17.05-343.49,3.59-470.89,7.18-192.42,5.42-232.15,12.11-425.57,11.33-56.6-.23-108.98-1.62-156.74-3.98-92.32-4.56-163.45-11.76-218.97-18.95-72.83-9.42-117.69-18.42-117.69-18.42" />
-                    <path class="cls-5 wave2" d="M.02,74.42c1154.33-14.13,959.67-87.69,2402.86-14.69" />
-                    <path class="cls-3 wave3"
-                        d="M55.97,50.28s204.15-17.29,513.21-22.1c58.33-.91,190.2-2.53,312.8.34,118.95,2.78,245.33,12.31,441.05,17.55,86.19,2.31,185.1,4.13,303.98,3.59,273.03-1.24,370-17.69,370-17.69" />
-                    <path class="cls-6 wave4"
-                        d="M55.73,59.54s181.96,17.16,491.03,19.12c212.25,1.35,349.68-5.78,519.81-10.5,96.35-2.67,195.36-4.43,299.56-4.01,309.51,1.24,389.25,10.95,485.26,21.69,77.61,8.68,308.23,33.14,395.08,16.5" />
-                    <path class="cls-2 wave5"
-                        d="M2013.6,74.42c-142.29,1.84-142.29-29.82-321.64-31.63-233.04-2.35-181.7,23.8-477.47,25.18C797.44,69.9,836.91,7.14,.02,25.72" />
-                </g>
-            </svg> -->
-            <img src="assets/images/web-lines.gif" alt="">
+            <lottie-player src="assets/images/web-lines.json" loop="true" autoplay="true" style="width:100;" class="wave-lottie"></lottie-player>
         </div>
 
     </div>
@@ -431,6 +432,7 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/smoother-script.js"></script>
     <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/lottie-player.js"></script>
     <!-- js-close -->
     <script>
         

@@ -9611,7 +9611,7 @@ fieldset:disabled .btn {
     }
 
     .align-items-md-start {
-        align-items: flex-start !important
+        align-items: center;
     }
 
     .align-items-md-end {

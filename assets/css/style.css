@@ -497,8 +497,15 @@ body.loaded {
     font-size: 18px;
     padding: 8px 0 !important;
     font-weight: 600;
+    margin: auto;
   }
-
+  .mega-menu-drop {
+    justify-content: center;
+  }
+  .navbar .megamenu {
+    height: auto;
+    text-align: center;
+}
   .mega-navbar {
     background-color: #000;
     padding: 25px;
@@ -871,6 +878,16 @@ body.loaded {
   overflow: hidden;
 }
 
+#water-dropdown-show {
+  display: none;
+  transition: 0.5s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
 .d-grid-hook{
   transition: 0.5s all;
   position: absolute;
@@ -879,8 +896,17 @@ body.loaded {
   overflow: auto;
   padding-left: 25px;
 }
-
-
+.d-grid-hook {
+  column-count: 3;
+  column-gap: 0;
+  column-fill: auto;
+  max-height: 300px;
+  width: 100%;
+}
+.linkes-sub {
+  display: block;
+  margin-bottom: 10px;
+}
 #basic-dropdown:hover #basic-dropdown-show,
 #basic-dropdown-show:hover {
   display: block;
@@ -890,10 +916,48 @@ body.loaded {
 #basic-dropdown-show:hover {
   pointer-events: auto;
 }
-
-
-
-
+#water-dropdown:hover #water-dropdown-show,
+#water-dropdown-show:hover {
+  display: block;
+  transition: 0.5s all;
+}
+#water-dropdown-show:hover {
+  pointer-events: auto;
+}
+.link-activate{
+  color: #00b8d4 !important;
+}
+@media (max-height: 800px) {
+  .navbar .megamenu {
+    height: 100vh;
+}
+}
+.mob-submenu {
+  display: none;
+}
+@media (max-width:1201px) {
+  .navbar .megamenu {
+    height: auto;
+}
+.sub-new-menu{
+  display: none;
+}
+.mob-submenu {
+  display: block;
+}
+.navbar-nav {
+  align-items: center !important;
+}
+.nav-link-c {
+  justify-content: center;
+}
+.nav-link-c svg{
+  display: none;
+}
+.linkes-sub {
+  text-align: center;
+}
+}
 /* close-nav */
 
 /* slider-banner */
@@ -1079,17 +1143,13 @@ body.loaded {
   left: 0;
   right: 0;
 }
-.wave-container img {
-  position: absolute;
-  width: 100%;
-  top: -90px;
+.wave-container .wave-lottie {
+  left: 0;
+  position: relative;
+  right: 0;
+  top: 80px;
 }
-/* .wave-container svg {
-  height: 100px;
-  position: absolute;
-  width: 100%;
-  top: -60px;
-} */
+
 
 .cls-1,
 .cls-2,
@@ -2091,7 +2151,7 @@ body.loaded {
 .all-products-main #product-04 {
   display: none;
   padding: 15px;
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .all-products-main .active {

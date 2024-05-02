@@ -92,45 +92,84 @@ $(document).ready(function () {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-  var dropdown = document.getElementById("basic-dropdown");
-  var dropdownShow = document.getElementById("basic-dropdown-show");
-  var isDropdownVisible = false;
+// menu-hover-script
 
-  dropdown.addEventListener("mouseover", function() {
-    dropdownShow.style.display = "block";
-    isDropdownVisible = true;
+document.addEventListener("DOMContentLoaded", function() {
+  var basicDropdown = document.getElementById("basic-dropdown");
+  var basicDropdownShow = document.getElementById("basic-dropdown-show");
+  var waterDropdown = document.getElementById("water-dropdown");
+  var waterDropdownShow = document.getElementById("water-dropdown-show");
+  var isBasicDropdownVisible = false;
+  var isWaterDropdownVisible = false;
+
+  basicDropdown.addEventListener("mouseover", function() {
+    basicDropdownShow.style.display = "block";
+    isBasicDropdownVisible = true;
   });
 
-  dropdown.addEventListener("mouseout", function(e) {
+  basicDropdown.addEventListener("mouseout", function(e) {
     var target = e.relatedTarget;
-    if (!dropdown.contains(target)) {
-      isDropdownVisible = false;
+    if (!basicDropdown.contains(target)) {
+      isBasicDropdownVisible = false;
       setTimeout(function() {
-        if (!isDropdownVisible) {
-          dropdownShow.style.display = "none";
+        if (!isBasicDropdownVisible) {
+          basicDropdownShow.style.display = "none";
         }
       }, 100); // Set a delay before hiding the dropdown (adjust the duration as needed)
     }
   });
 
-  dropdownShow.addEventListener("mouseover", function() {
-    isDropdownVisible = true;
+  basicDropdownShow.addEventListener("mouseover", function() {
+    isBasicDropdownVisible = true;
   });
 
-  dropdownShow.addEventListener("mouseout", function(e) {
+  basicDropdownShow.addEventListener("mouseout", function(e) {
     var target = e.relatedTarget;
-    if (!dropdown.contains(target)) {
-      isDropdownVisible = false;
+    if (!basicDropdown.contains(target)) {
+      isBasicDropdownVisible = false;
       setTimeout(function() {
-        if (!isDropdownVisible) {
-          dropdownShow.style.display = "none";
+        if (!isBasicDropdownVisible) {
+          basicDropdownShow.style.display = "none";
+        }
+      }, 100); // Set a delay before hiding the dropdown (adjust the duration as needed)
+    }
+  });
+
+  waterDropdown.addEventListener("mouseover", function() {
+    waterDropdownShow.style.display = "block";
+    isWaterDropdownVisible = true;
+  });
+
+  waterDropdown.addEventListener("mouseout", function(e) {
+    var target = e.relatedTarget;
+    if (!waterDropdown.contains(target)) {
+      isWaterDropdownVisible = false;
+      setTimeout(function() {
+        if (!isWaterDropdownVisible) {
+          waterDropdownShow.style.display = "none";
+        }
+      }, 100); // Set a delay before hiding the dropdown (adjust the duration as needed)
+    }
+  });
+
+  waterDropdownShow.addEventListener("mouseover", function() {
+    isWaterDropdownVisible = true;
+  });
+
+  waterDropdownShow.addEventListener("mouseout", function(e) {
+    var target = e.relatedTarget;
+    if (!waterDropdown.contains(target)) {
+      isWaterDropdownVisible = false;
+      setTimeout(function() {
+        if (!isWaterDropdownVisible) {
+          waterDropdownShow.style.display = "none";
         }
       }, 100); // Set a delay before hiding the dropdown (adjust the duration as needed)
     }
   });
 });
 
+// close
 
 // dropdown-active
 
