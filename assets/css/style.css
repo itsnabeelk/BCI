@@ -863,7 +863,23 @@ body.loaded {
 #basic-dropdown-show {
   display: none;
   transition: 0.5s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
 }
+
+.d-grid-hook{
+  transition: 0.5s all;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  padding-left: 25px;
+}
+
 
 #basic-dropdown:hover #basic-dropdown-show,
 #basic-dropdown-show:hover {
@@ -1063,13 +1079,17 @@ body.loaded {
   left: 0;
   right: 0;
 }
-
-.wave-container svg {
+.wave-container img {
+  position: absolute;
+  width: 100%;
+  top: -90px;
+}
+/* .wave-container svg {
   height: 100px;
   position: absolute;
   width: 100%;
   top: -60px;
-}
+} */
 
 .cls-1,
 .cls-2,
