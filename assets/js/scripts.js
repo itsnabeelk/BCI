@@ -367,11 +367,9 @@ document.addEventListener('click', function(event) {
 // contact-form
 function toggleContactForm() {
   var contactForm = document.getElementById("contact-form");
-  if (contactForm.classList.contains("contact-form-hide")) {
+  if (contactForm.style.display === "none") {
     contactForm.style.display = "block";
-    setTimeout(function() {
-      contactForm.classList.remove("contact-form-hide");
-    }, 10);
+    contactForm.classList.remove("contact-form-hide");
   } else {
     contactForm.classList.add("contact-form-hide");
     setTimeout(function() {
