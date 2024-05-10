@@ -370,6 +370,7 @@ function toggleContactForm() {
   if (contactForm.style.display === "none") {
     contactForm.style.display = "block";
     contactForm.classList.remove("contact-form-hide");
+    contactForm.scrollIntoView({ behavior: "smooth", block: "start" });
   } else {
     contactForm.classList.add("contact-form-hide");
     setTimeout(function() {
@@ -383,3 +384,17 @@ function toggleContactForm() {
 // inner-news
 
 // close
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const readMoreElement = document.querySelector(".read-more");
+  const collapseTarget = document.querySelector(readMoreElement.getAttribute("data-bs-target"));
+  
+  collapseTarget.addEventListener("show.bs.collapse", function() {
+      readMoreElement.textContent = "Read Less";
+  });
+  
+  collapseTarget.addEventListener("hide.bs.collapse", function() {
+      readMoreElement.textContent = "Read More";
+  });
+});
