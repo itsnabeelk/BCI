@@ -125,3 +125,12 @@
     padding-right: 10px;
     padding-left: 10px;
 }
+
+.all-products-main {
+    direction: rtl;
+    text-align: right;
+}
+.content-dropdown .dropdown-btn.active+.dropdown-table {
+    direction: ltr;
+    text-align: left;
+}
