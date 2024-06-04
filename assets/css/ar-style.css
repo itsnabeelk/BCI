@@ -1,0 +1,127 @@
+.navbar {
+    direction: rtl;
+    text-align: right;
+}
+.dropdown-menu.show {
+    direction: rtl;
+    text-align: right;
+}
+
+.nav-link-c svg{
+    transform: rotate(180deg);
+}
+@media (max-height: 800px) {
+    .dropdown-menu.show {
+        direction: rtl;
+        text-align: center;
+    }
+}
+.banner-text {
+    right: 10%;
+    left: auto;
+    direction: rtl;
+    text-align: right;
+}
+.sc-one{
+    direction: rtl;
+    text-align: right;
+}
+.sr-icon-main {
+    direction: rtl;
+    text-align: right;
+}
+.footer-sec {
+    direction: rtl;
+    text-align: right;
+}
+.breadcrumb-custom {
+    position: absolute;
+    width: 100%;
+    top: 139px;
+    background: #ffffffc9;
+    direction: rtl;
+    text-align: right;
+}
+.breadcrumb-item img {
+    vertical-align: middle;
+    transform: rotate(180deg);
+}
+.breadcrumb-item {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: #6c757d;
+    padding-left: 0.5rem;
+}
+.history-section {
+    direction: rtl;
+    text-align: right;
+}
+.circle .circle-up {
+    direction: rtl;
+    text-align: right;
+}
+.circle .circle-down {
+    direction: rtl;
+    text-align: right;
+}
+.breadcrumb {
+    direction: rtl;
+    text-align: right;
+}
+.vision-main .accordion-button::before {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.accordion-button::after {
+    margin-left: 0;
+    margin-right: auto;
+}
+.business-unit-section {
+    direction: rtl;
+    text-align: right;
+}
+.business-unit-section .card-body {
+    justify-content: right;
+}
+.business-unit-section .card-body::before {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.news-section {
+    direction: rtl;
+    text-align: right;
+}
+.news-container .news-content-container a::after {
+    right: 0;
+    left: auto;
+}
+.news-inner {
+    direction: rtl;
+    text-align: right;
+}
+.modal-content {
+    direction: rtl;
+    text-align: right;
+}
+.modal-header .btn-close {
+    margin: -.5rem -.5rem -.5rem 0;
+}
+.form-control {
+    direction: ltr;
+    text-align: right;
+}
+.contact-section {
+    direction: rtl;
+    text-align: right;
+}
+.contact-main ul li a {
+    direction: ltr;
+}
+.location-container {
+    direction: rtl;
+    text-align: right;
+}
+.contact-main ul li a span {
+    padding-right: 10px;
+    padding-left: 10px;
+}
