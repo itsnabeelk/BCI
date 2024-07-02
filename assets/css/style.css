@@ -26,7 +26,7 @@ body {
   color: #101921;
   background-color: #fff;
   font-size: 16px;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden !important;
 }
 
@@ -1153,7 +1153,10 @@ body.loaded {
 @media (max-width:1080px) {
   .banner-text {
     font-size: 70px;
-  }
+    text-align: center !important;
+    left: 0 !important;
+    right: 0 !important;
+}
 }
 
 /* close */
