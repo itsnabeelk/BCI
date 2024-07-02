@@ -1,4 +1,4 @@
-
+/* 
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
 body{
@@ -27,6 +27,34 @@ label{
 }
 ol{
     font-family: "Cairo", sans-serif !important;
+} */
+
+body{
+    font-family: "Arial", sans-serif !important;
+}
+p{
+    font-family: "Arial", sans-serif !important;
+}
+ul{
+    font-family: "Arial", sans-serif !important;
+}
+li{
+    font-family: "Arial", sans-serif !important;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Arial", sans-serif !important;
+}
+a{
+    font-family: "Arial", sans-serif !important;
+}
+span{
+    font-family: "Arial", sans-serif !important;
+}
+label{
+    font-family: "Arial", sans-serif !important;
+}
+ol{
+    font-family: "Arial", sans-serif !important;
 }
 
 
