@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
 
-body{
+/* body{
     font-family: "Cairo", sans-serif !important;
 }
 p{
@@ -27,7 +27,7 @@ label{
 }
 ol{
     font-family: "Cairo", sans-serif !important;
-}
+} */
 
 
 
@@ -166,4 +166,13 @@ ol{
 .content-dropdown .dropdown-btn.active+.dropdown-table {
     direction: ltr;
     text-align: left;
+}
+
+@media (max-width:580px) {
+    .banner-text {
+        left: 0;
+        right: 0;
+        direction: rtl;
+        text-align: center;
+    }
 }

@@ -1,0 +1,142 @@
+
+
+@font-face {
+    font-family: 'articulat_cfbold';
+    src: url('articulatcf-bold.woff2') format('woff2'),
+         url('articulatcf-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfbold_oblique';
+    src: url('articulatcf-boldoblique.woff2') format('woff2'),
+         url('articulatcf-boldoblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfdemi_bold';
+    src: url('articulatcf-demibold.woff2') format('woff2'),
+         url('articulatcf-demibold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfdemi_bold_oblique';
+    src: url('articulatcf-demiboldoblique.woff2') format('woff2'),
+         url('articulatcf-demiboldoblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfextra_bold';
+    src: url('articulatcf-extrabold.woff2') format('woff2'),
+         url('articulatcf-extrabold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfXBdOb';
+    src: url('articulatcf-extraboldoblique.woff2') format('woff2'),
+         url('articulatcf-extraboldoblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfextra_light';
+    src: url('articulatcf-extralight.woff2') format('woff2'),
+         url('articulatcf-extralight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfXLtOb';
+    src: url('articulatcf-extralightoblique.woff2') format('woff2'),
+         url('articulatcf-extralightoblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfheavy';
+    src: url('articulatcf-heavy.woff2') format('woff2'),
+         url('articulatcf-heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cfheavy_oblique';
+    src: url('articulatcf-heavyoblique.woff2') format('woff2'),
+         url('articulatcf-heavyoblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cflight';
+    src: url('articulatcf-light.woff2') format('woff2'),
+         url('articulatcf-light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'articulat_cflight_oblique';
+    src: url('articulatcf-lightoblique.woff2') format('woff2'),
+         url('articulatcf-lightoblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
